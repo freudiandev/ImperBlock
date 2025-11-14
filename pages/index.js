@@ -20,7 +20,7 @@ export default function Home() {
           <nav className="nav">
             <a href="#servicios">Servicios</a>
             <a href="#proceso">Proceso</a>
-            <a href="#garantia">Garantía</a>
+            <a href="#confianza">Confianza</a>
             <a href="#contacto">Contacto</a>
           </nav>
         </div>
@@ -33,11 +33,11 @@ export default function Home() {
             <span className="badge-years">5 AÑOS</span>
             <span className="badge-text">GARANTÍA + MANTENIMIENTO ANUAL GRATUITO</span>
           </div>
-          <h1>ALGUIEN EN QUIEN CONFIAR</h1>
-          <p className="hero-tagline">Nosotros solucionamos problemas, no los creamos</p>
-          <p className="lead">Impermeabilización profesional de terrazas, tejados, fosos y cisternas en Quito.</p>
+          <h1>Solucionamos problemas, no los creamos.</h1>
+          <p className="hero-tagline">Impermeabilización profesional y responsable en Quito y Pichincha.</p>
+          <p className="lead">Confía en la experiencia europea y la seriedad de un equipo que pone al cliente primero. Protege tu inversión y tu tranquilidad con ImperBlock.</p>
           <div className="hero-cta">
-            <a className="btn primary" href="#contacto">Asesoramiento gratuito</a>
+            <a className="btn primary" href="#contacto">Solicita asesoría gratuita</a>
             <a className="btn ghost" href="#servicios">Ver servicios</a>
           </div>
         </div>
@@ -47,27 +47,27 @@ export default function Home() {
         <ScrollReveal>
           <section id="servicios" className="section container">
             <h2>Servicios de Impermeabilización</h2>
-            <p className="muted">Soluciones profesionales que evitan humedades y protegen tu inversión.</p>
+            <p className="muted">Soluciones profesionales para proteger tu hogar, tu edificio y tu tranquilidad.</p>
             <div className="grid">
               <ScrollReveal delay={100}>
                 <div className="service-card">
                   <div className="service-icon">🏠</div>
-                  <h3>Terrazas</h3>
-                  <p>Servicio estrella. Impermeabilización resistente al tránsito con materiales de última generación.</p>
+                  <h3>Impermeabilización de Terrazas</h3>
+                  <p>Evita filtraciones y daños estructurales. Materiales de última generación, resistencia al tránsito y garantía real.</p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <div className="service-card">
                   <div className="service-icon">🏗️</div>
-                  <h3>Tejados</h3>
-                  <p>Colocación de pérgolas y tejados de todo tipo. Soluciones duraderas y estéticas.</p>
+                  <h3>Tejados y Pérgolas</h3>
+                  <p>Instalación y protección de cubiertas, pérgolas y tejados. Soluciones estéticas y funcionales, adaptadas a cada necesidad.</p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <div className="service-card">
                   <div className="service-icon">💧</div>
-                  <h3>Fosos y Cisternas</h3>
-                  <p>Impermeabilización especializada para contener agua y evitar filtraciones.</p>
+                  <h3>Fosos, Cisternas y Piscinas</h3>
+                  <p>Impermeabilización especializada para zonas de alta exigencia. Seguridad y durabilidad garantizadas.</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -76,42 +76,42 @@ export default function Home() {
 
         <ScrollReveal>
           <section id="proceso" className="section alt container">
-            <h2>Nuestro Proceso de Trabajo</h2>
-            <p className="muted">Transparencia y profesionalidad en cada etapa.</p>
+            <h2>¿Cómo trabajamos?</h2>
+            <p className="muted">Transparencia, profesionalidad y atención personalizada en cada etapa.</p>
             <div className="process">
               <ScrollReveal delay={100}>
                 <div className="process-step">
                   <div className="step-number">1</div>
-                  <h3>Contacto</h3>
-                  <p>Recibimos tu llamada y coordinamos una <strong>visita técnica gratuita</strong>.</p>
+                  <h3>Contacto y visita técnica</h3>
+                  <p>Coordinamos una <strong>visita gratuita</strong> para evaluar tu caso y darte la mejor solución.</p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={150}>
                 <div className="process-step">
                   <div className="step-number">2</div>
-                  <h3>Diagnóstico</h3>
-                  <p>Medimos, evaluamos el estado de la superficie y te informamos de las opciones de materiales.</p>
+                  <h3>Diagnóstico profesional</h3>
+                  <p>Analizamos el estado, medimos y te explicamos las opciones de materiales y técnicas.</p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <div className="process-step">
                   <div className="step-number">3</div>
-                  <h3>Cotización</h3>
-                  <p>Presupuesto claro por m². Forma de pago transparente, sin anticipos inesperados.</p>
+                  <h3>Cotización clara</h3>
+                  <p>Presupuesto detallado por m², sin sorpresas. Forma de pago transparente y sin anticipos abusivos.</p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={250}>
                 <div className="process-step">
                   <div className="step-number">4</div>
-                  <h3>Ejecución</h3>
-                  <p>Cumplimiento de plazos. Usamos los materiales indicados en el presupuesto.</p>
+                  <h3>Ejecución y entrega</h3>
+                  <p>Cumplimos plazos y usamos los materiales acordados. Supervisión constante y comunicación directa.</p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <div className="process-step">
                   <div className="step-number">5</div>
-                  <h3>Garantía</h3>
-                  <p><strong>5 años de garantía</strong> con mantenimiento anual gratuito incluido.</p>
+                  <h3>Garantía y postventa</h3>
+                  <p><strong>5 años de garantía</strong> y mantenimiento anual gratuito. Seguimiento real y compromiso post-obra.</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -199,6 +199,34 @@ export default function Home() {
             <ScrollReveal delay={400}>
               <div className="cta-whatsapp">
                 <a href="https://wa.me/593959785062?text=Hola,%20necesito%20información%20sobre%20impermeabilización" 
+                  className="btn primary" target="_blank" rel="noopener">
+                  Escribir por WhatsApp
+                </a>
+              </div>
+            </ScrollReveal>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <section id="blog" className="section alt container">
+            <h2>Blog y Recursos</h2>
+            <p className="muted">Lee artículos sobre impermeabilización de techos y lozas, ingeniería civil y arquitectura, escritos por nuestro equipo y colaboradores.</p>
+            <div className="blog-access-box">
+              <a
+                href="https://medium.com/@blockimper"
+                target="_blank"
+                rel="noopener"
+                className="btn primary"
+                style={{marginTop: '16px'}}
+              >
+                Visitar el Blog en Medium
+              </a>
+              <p style={{marginTop: '12px', color: 'var(--brand-color)', fontWeight: 700}}>
+                Encuentra consejos, tendencias y casos reales para proteger tu inversión y mantener tus espacios en óptimas condiciones.
+              </p>
+            </div>
+          </section>
+        </ScrollReveal>
                    className="btn whatsapp" 
                    target="_blank" 
                    rel="noopener">
