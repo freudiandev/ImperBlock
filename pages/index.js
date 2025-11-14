@@ -20,7 +20,7 @@
       </footer>
 import Head from 'next/head'
 import ScrollReveal from '../components/ScrollReveal'
-import HeroAnimated from '../components/HeroAnimated'
+import HeroP5 from '../components/HeroP5'
 
 export default function Home() {
   return (
@@ -47,7 +47,7 @@ export default function Home() {
       </header>
 
       <section className="hero">
-        <HeroAnimated />
+        <HeroP5 />
         <div className="hero-content container">
           <div className="hero-badge">
             <span className="badge-years">5 AÑOS</span>
@@ -288,7 +288,7 @@ export default function Home() {
           <div className="footer-contact">
             <p><strong>Manolo Bello</strong> — CEO</p>
             <p>095 978 5062</p>
-            <p>imperblock.ec</p>
+            <p>impermeabilizacion.uio.ec</p>
           </div>
           <div className="footer-copy">
             <p>© {new Date().getFullYear()} ImperBlock. Todos los derechos reservados.</p>
