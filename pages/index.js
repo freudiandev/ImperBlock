@@ -1,3 +1,23 @@
+      <footer className="site-footer">
+        <div className="container footer-inner">
+          <div className="footer-brand">
+            <span className="brand-logo">💧</span>
+            <span className="brand-name">ImperBlock</span>
+          </div>
+          <div className="footer-contact">
+            <span>Quito, Ecuador</span> | <a href="tel:+593959785062">095 978 5062</a>
+          </div>
+          <div className="footer-social">
+            <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+            <a href="https://tiktok.com/@imperblock.ec" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+            <a href="https://medium.com/@blockimper" target="_blank" rel="noopener" aria-label="Medium">Blog</a>
+          </div>
+          <div className="footer-copy">
+            © {new Date().getFullYear()} ImperBlock. Todos los derechos reservados.
+          </div>
+        </div>
+      </footer>
 import Head from 'next/head'
 import ScrollReveal from '../components/ScrollReveal'
 import HeroAnimated from '../components/HeroAnimated'
