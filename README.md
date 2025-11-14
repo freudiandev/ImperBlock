@@ -25,11 +25,11 @@ npm run dev
 
 La aplicación estará disponible en **http://localhost:3000**
 
-### Build para producción
+
+### Build para producción (export estático)
 
 ```powershell
 npm run build
-npm start
 ```
 
 ## 📂 Estructura del Proyecto
@@ -86,15 +86,14 @@ Coloca archivos JPG/PNG en `public/images/` y actualiza la galería en `pages/in
 - **TikTok**: @imperblock.ec
 - **Ubicación**: Quito (Zona Norte, desde El Ejido hasta La Kennedy)
 
-## 🌐 Deploy (Recomendado)
 
-### Vercel (más fácil para Next.js)
-1. Push del proyecto a GitHub
-2. Conectar repositorio en [vercel.com](https://vercel.com)
-3. Deploy automático
+## 🌐 Deploy
 
-### Netlify / Otras plataformas
-Next.js es compatible con cualquier plataforma que soporte Node.js.
+El sitio estático se publica automáticamente en:
+
+https://impermeabilizacion.uio.ec
+
+No es necesario configurar rutas especiales ni assetPrefix/basePath.
 
 ## 📈 SEO y Marketing
 
