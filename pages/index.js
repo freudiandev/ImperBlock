@@ -247,15 +247,7 @@ export default function Home() {
             </div>
           </section>
         </ScrollReveal>
-                   className="btn whatsapp" 
-                   target="_blank" 
-                   rel="noopener">
-                  💬 Escribir por WhatsApp
-                </a>
-              </div>
-            </ScrollReveal>
-          </section>
-        </ScrollReveal>
+// ...existing code...
 
         <ScrollReveal>
           <section className="section values container">
