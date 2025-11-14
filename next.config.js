@@ -4,8 +4,6 @@ const nextConfig = {
   images: { unoptimized: true },
   trailingSlash: true,
   output: 'export',
-  basePath: '/ImperBlock',
-  assetPrefix: '/ImperBlock/',
   // ...otros settings si tienes
 };
 module.exports = nextConfig
