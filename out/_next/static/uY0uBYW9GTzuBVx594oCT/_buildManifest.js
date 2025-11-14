@@ -1,18 +1,13 @@
 self.__BUILD_MANIFEST = {
   "/": [
-    "static/chunks/213a6dc5cf49459b.js"
+    "static/chunks/488daa2a1b2a6b5a.js"
   ],
   "/_error": [
-    "static/chunks/a9bb5abb6d92509c.js"
+    "static/chunks/1c8c077c1e040c75.js"
   ],
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [
-      {
-        "source": "/ImperBlock//_next/:path+",
-        "destination": "/ImperBlock/_next/:path+"
-      }
-    ],
+    "beforeFiles": [],
     "fallback": []
   },
   "sortedPages": [
