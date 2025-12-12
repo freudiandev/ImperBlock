@@ -31,10 +31,10 @@ export default function Navbar() {
 
           {/* Social Icons - Desktop */}
           <div className="header-social d-none d-lg-flex">
-            <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61570419122110" target="_blank" rel="noopener" aria-label="Facebook">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://www.instagram.com/imperblock.ec/" target="_blank" rel="noopener" aria-label="Instagram">
               <i className="fab fa-instagram"></i>
             </a>
           </div>
@@ -94,10 +94,10 @@ export default function Navbar() {
           
           {/* Social Icons - Mobile */}
           <div className="mobile-social">
-            <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61570419122110" target="_blank" rel="noopener" aria-label="Facebook">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://www.instagram.com/imperblock.ec/" target="_blank" rel="noopener" aria-label="Instagram">
               <i className="fab fa-instagram"></i>
             </a>
           </div>

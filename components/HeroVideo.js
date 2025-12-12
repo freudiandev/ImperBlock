@@ -24,7 +24,6 @@ export default function HeroVideo() {
         <source src="/videos/1.mp4" type="video/mp4" />
         Tu navegador no soporta video HTML5.
       </video>
-      <div className="hero-overlay"></div>
     </div>
   )
 }

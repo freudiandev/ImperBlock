@@ -43,9 +43,6 @@ export default function Home() {
             <span className="badge-years">5 AÑOS</span>
             <span className="badge-text">GARANTÍA + MANTENIMIENTO ANUAL GRATUITO</span>
           </div>
-          <h1>Solucionamos problemas, no los creamos.</h1>
-          <p className="hero-tagline">Impermeabilización profesional y responsable en Quito y Pichincha.</p>
-          <p className="lead">Confía en la experiencia europea y la seriedad de un equipo que pone al cliente primero. Protege tu inversión y tu tranquilidad con ImperBlock.</p>
           <div className="hero-cta">
             <a className="btn primary" href="#contacto">Solicita asesoría gratuita</a>
             <a className="btn ghost" href="#servicios">Ver servicios</a>
@@ -160,22 +157,40 @@ export default function Home() {
             <p className="muted">Trabajos que hablan por sí solos.</p>
             <div className="gallery">
               <ScrollReveal delay={100}>
-                <img src="/images/proyecto-1.jpg" alt="Trabajo de impermeabilización" />
+                <img src="/images/a.jpg" alt="Trabajo de impermeabilización" />
+              </ScrollReveal>
+              <ScrollReveal delay={125}>
+                <img src="/images/b.jpg" alt="Proyecto ImperBlock" />
               </ScrollReveal>
               <ScrollReveal delay={150}>
-                <img src="/images/proyecto-2.jpg" alt="Proyecto ImperBlock" />
+                <img src="/images/c.jpg" alt="Impermeabilización de terraza" />
+              </ScrollReveal>
+              <ScrollReveal delay={175}>
+                <img src="/images/d.jpg" alt="Servicio profesional" />
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <img src="/images/proyecto-3.jpg" alt="Impermeabilización de terraza" />
+                <img src="/images/e.jpg" alt="Impermeabilización profesional" />
+              </ScrollReveal>
+              <ScrollReveal delay={225}>
+                <img src="/images/f.jpg" alt="Trabajo completado" />
               </ScrollReveal>
               <ScrollReveal delay={250}>
-                <img src="/images/proyecto-4.jpg" alt="Servicio profesional" />
+                <img src="/images/g.jpg" alt="Impermeabilización de calidad" />
+              </ScrollReveal>
+              <ScrollReveal delay={275}>
+                <img src="/images/h.jpg" alt="Proyecto finalizado" />
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <img src="/images/proyecto-5.jpg" alt="Impermeabilización profesional" />
+                <img src="/images/i.jpg" alt="Trabajo especializado" />
+              </ScrollReveal>
+              <ScrollReveal delay={325}>
+                <img src="/images/j.jpg" alt="Impermeabilización garantizada" />
               </ScrollReveal>
               <ScrollReveal delay={350}>
-                <img src="/images/proyecto-6.jpg" alt="Trabajo completado" />
+                <img src="/images/k.jpg" alt="Servicio completo" />
+              </ScrollReveal>
+              <ScrollReveal delay={375}>
+                <img src="/images/l.jpg" alt="Resultado profesional" />
               </ScrollReveal>
             </div>
           </section>
