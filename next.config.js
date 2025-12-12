@@ -10,6 +10,12 @@ const nextConfig = {
   // Configuración para dominio personalizado
   assetPrefix: '',
   basePath: '',
+  
+  // Generate unique build ID for cache busting
+  generateBuildId: async () => {
+    // Usar timestamp para forzar actualización en cada deploy
+    return `build-${Date.now()}`;
+  },
 };
 
 module.exports = nextConfig;

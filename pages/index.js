@@ -30,6 +30,12 @@ export default function Home() {
         <title>ImperBlock — Impermeabilización profesional en Quito</title>
         <meta name="description" content="Impermeabilización de terrazas, tejados, fosos y cisternas. Garantía 5 años + mantenimiento anual gratuito. Quito, Ecuador." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Cache Control */}
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
+        
         <link rel="icon" type="image/png" href="/images/logo.png" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
       </Head>
