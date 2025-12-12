@@ -77,7 +77,11 @@ p, li, .lead, .muted {
   color:var(--brand-color);
   letter-spacing:0.5px;
 }
-.brand-logo{font-size:1.3rem}
+.brand-logo{
+  height:40px;
+  width:auto;
+  object-fit:contain;
+}
 /* NAV */
 .nav a{
   margin-left:24px;

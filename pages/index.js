@@ -29,12 +29,14 @@ export default function Home() {
         <title>ImperBlock — Impermeabilización profesional en Quito</title>
         <meta name="description" content="Impermeabilización de terrazas, tejados, fosos y cisternas. Garantía 5 años + mantenimiento anual gratuito. Quito, Ecuador." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="/images/logo.png" />
+        <link rel="apple-touch-icon" href="/images/logo.png" />
       </Head>
 
       <header className="site-header">
         <div className="container header-inner">
           <div className="brand">
-            <span className="brand-logo">💧</span>
+            <img src="/images/logo.png" alt="ImperBlock Logo" className="brand-logo" />
             <span className="brand-name">ImperBlock</span>
           </div>
           <nav className="nav">
@@ -280,7 +282,7 @@ export default function Home() {
         <div className="container footer-inner">
           <div className="footer-brand">
             <div className="brand">
-              <span className="brand-logo">💧</span>
+              <img src="/images/logo.png" alt="ImperBlock Logo" className="brand-logo" />
               <span className="brand-name">ImperBlock</span>
             </div>
             <p className="footer-tagline">Solucionamos problemas, no los creamos</p>
