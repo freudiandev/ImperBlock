@@ -14,10 +14,10 @@
     "docker:dev": "docker-compose up"
   },
   "dependencies": {
-    "next": "^15.1.0",
-    "p5": "^1.11.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^16.0.10",
+    "p5": "^2.1.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
