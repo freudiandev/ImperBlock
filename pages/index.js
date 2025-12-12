@@ -214,7 +214,7 @@ export default function Home() {
                 <div className="contact-card">
                   <div className="contact-icon">📍</div>
                   <h3>Ubicación</h3>
-                  <p className="contact-value">Quito — Zona Norte<br />(Desde El Ejido hasta La Kennedy)</p>
+                  <p className="contact-value">Quito — Sector La Kennedy</p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={300}>
