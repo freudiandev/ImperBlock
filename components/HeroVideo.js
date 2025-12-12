@@ -20,7 +20,6 @@ export default function HeroVideo() {
         muted
         loop
         playsInline
-        poster="/images/logo.png"
       >
         <source src="/videos/1.mp4" type="video/mp4" />
         Tu navegador no soporta video HTML5.
