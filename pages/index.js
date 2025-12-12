@@ -297,7 +297,7 @@ export default function Home() {
         <ScrollReveal>
           <section className="section hashtags-section container">
             <div className="hashtags-content">
-              <h3 className="hashtags-title">Encuentra más información</h3>
+              <h3 className="hashtags-title">Zona de hashtags</h3>
               <div className="hashtags-grid">
                 <span className="hashtag">#ImpermeabilizacionTechosQuito</span>
                 <span className="hashtag">#ImpermeabilizarLosas</span>
