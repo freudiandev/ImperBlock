@@ -293,6 +293,26 @@ export default function Home() {
             </div>
           </section>
         </ScrollReveal>
+
+        <ScrollReveal>
+          <section className="section hashtags-section container">
+            <div className="hashtags-content">
+              <h3 className="hashtags-title">Encuentra más información</h3>
+              <div className="hashtags-grid">
+                <span className="hashtag">#ImpermeabilizacionTechosQuito</span>
+                <span className="hashtag">#ImpermeabilizarLosas</span>
+                <span className="hashtag">#EvitarHumedadCasa</span>
+                <span className="hashtag">#SolucionesHumedadParedes</span>
+                <span className="hashtag">#RestauracionFachadasQuito</span>
+                <span className="hashtag">#ObrasCivilesQuito</span>
+                <span className="hashtag">#ArquitectosQuito</span>
+                <span className="hashtag">#ImpermeabilizanteChova</span>
+                <span className="hashtag">#EvitarGoterasTechos</span>
+                <span className="hashtag">#RestauracionArquitecturaQuito</span>
+              </div>
+            </div>
+          </section>
+        </ScrollReveal>
       </main>
 
       <footer className="site-footer">

@@ -1021,3 +1021,74 @@ p, li, .lead, .muted {
     padding:24px;
   }
 }
+
+/* Hashtags SEO Section */
+.hashtags-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 48px 0;
+  margin-top: 0;
+}
+
+.hashtags-content {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hashtags-title {
+  color: var(--brand-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hashtags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hashtag {
+  display: inline-block;
+  padding: 10px 18px;
+  background: white;
+  color: var(--brand-color);
+  border: 2px solid var(--brand-color);
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: default;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.hashtag:hover {
+  background: var(--brand-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+@media (max-width: 768px) {
+  .hashtags-section {
+    padding: 36px 0;
+  }
+  
+  .hashtags-title {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+  }
+  
+  .hashtags-grid {
+    gap: 8px;
+  }
+  
+  .hashtag {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
