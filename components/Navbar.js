@@ -53,6 +53,10 @@ export default function Navbar() {
               <i className="fas fa-shield-alt"></i>
               <span>Garantía</span>
             </a>
+            <a href="#blog" className="nav-link">
+              <i className="fas fa-blog"></i>
+              <span>Blog</span>
+            </a>
             <a href="#contacto" className="nav-link">
               <i className="fas fa-phone-alt"></i>
               <span>Contacto</span>
@@ -86,6 +90,10 @@ export default function Navbar() {
           <a href="#garantia" className="mobile-nav-link" onClick={closeMenu}>
             <i className="fas fa-shield-alt"></i>
             <span>Garantía</span>
+          </a>
+          <a href="#blog" className="mobile-nav-link" onClick={closeMenu}>
+            <i className="fas fa-blog"></i>
+            <span>Blog</span>
           </a>
           <a href="#contacto" className="mobile-nav-link" onClick={closeMenu}>
             <i className="fas fa-phone-alt"></i>
