@@ -4,17 +4,12 @@ const nextConfig = {
   images: { unoptimized: true },
   trailingSlash: true,
   
-  // Para export estático (GitHub Pages)
+  // Para GitHub Pages (export estático)
   output: process.env.BUILD_MODE === 'export' ? 'export' : 'standalone',
   
-  // Si usas un dominio personalizado, assetPrefix y basePath deben ser "/"
-  assetPrefix: process.env.NODE_ENV === 'production' && process.env.BUILD_MODE === 'export' ? '/' : '',
-  basePath: process.env.NODE_ENV === 'production' && process.env.BUILD_MODE === 'export' ? '' : '',
-  
-  // Configuración para Docker
-  ...(process.env.BUILD_MODE !== 'export' && {
-    output: 'standalone',
-  }),
+  // Configuración para dominio personalizado
+  assetPrefix: '',
+  basePath: '',
 };
 
 module.exports = nextConfig;
