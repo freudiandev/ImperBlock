@@ -20,7 +20,8 @@
       </footer>
 import Head from 'next/head'
 import ScrollReveal from '../components/ScrollReveal'
-import HeroP5 from '../components/HeroP5'
+import HeroVideo from '../components/HeroVideo'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
@@ -33,23 +34,10 @@ export default function Home() {
         <link rel="apple-touch-icon" href="/images/logo.png" />
       </Head>
 
-      <header className="site-header">
-        <div className="container header-inner">
-          <div className="brand">
-            <img src="/images/logo.png" alt="ImperBlock Logo" className="brand-logo" />
-            <span className="brand-name">ImperBlock</span>
-          </div>
-          <nav className="nav">
-            <a href="#servicios">Servicios</a>
-            <a href="#proceso">Proceso</a>
-            <a href="#confianza">Confianza</a>
-            <a href="#contacto">Contacto</a>
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       <section className="hero">
-        <HeroP5 />
+        <HeroVideo />
         <div className="hero-content container">
           <div className="hero-badge">
             <span className="badge-years">5 AÑOS</span>
@@ -141,18 +129,26 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <section id="garantia" className="section container">
-            <div className="guarantee-box">
-              <div className="guarantee-icon">✓</div>
-              <div className="guarantee-content">
-                <h2>Garantía de 5 Años</h2>
-                <p>Todos nuestros trabajos incluyen garantía de 5 años con <strong>mantenimiento anual gratuito</strong>. Visitamos tu obra cada año para verificar que todo esté perfecto y realizar cualquier intervención necesaria sin costo adicional.</p>
-                <ul className="guarantee-list">
-                  <li>✓ Visita técnica anual incluida</li>
-                  <li>✓ Reparaciones cubiertas por garantía</li>
-                  <li>✓ Materiales de última generación</li>
-                  <li>✓ Responsabilidad total sobre nuestro trabajo</li>
-                </ul>
+          <section id="garantia" className="section-blue">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-lg-6">
+                  <div className="guarantee-icon-large">
+                    <i className="fas fa-shield-alt"></i>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <div className="guarantee-content">
+                    <h2>Garantía de 5 Años</h2>
+                    <p>Todos nuestros trabajos incluyen garantía de 5 años con <strong>mantenimiento anual gratuito</strong>. Visitamos tu obra cada año para verificar que todo esté perfecto y realizar cualquier intervención necesaria sin costo adicional.</p>
+                    <ul className="guarantee-list">
+                      <li><i className="fas fa-check-circle"></i> Visita técnica anual incluida</li>
+                      <li><i className="fas fa-check-circle"></i> Reparaciones cubiertas por garantía</li>
+                      <li><i className="fas fa-check-circle"></i> Materiales de última generación</li>
+                      <li><i className="fas fa-check-circle"></i> Responsabilidad total sobre nuestro trabajo</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
