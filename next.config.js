@@ -3,10 +3,18 @@ const nextConfig = {
   reactStrictMode: true,
   images: { unoptimized: true },
   trailingSlash: true,
-  output: 'export',
+  
+  // Para export estático (GitHub Pages)
+  output: process.env.BUILD_MODE === 'export' ? 'export' : 'standalone',
+  
   // Si usas un dominio personalizado, assetPrefix y basePath deben ser "/"
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
-  // ...otros settings si tienes
+  assetPrefix: process.env.NODE_ENV === 'production' && process.env.BUILD_MODE === 'export' ? '/' : '',
+  basePath: process.env.NODE_ENV === 'production' && process.env.BUILD_MODE === 'export' ? '' : '',
+  
+  // Configuración para Docker
+  ...(process.env.BUILD_MODE !== 'export' && {
+    output: 'standalone',
+  }),
 };
-module.exports = nextConfig
+
+module.exports = nextConfig;

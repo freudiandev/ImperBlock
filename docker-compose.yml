@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  imperblock:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: imperblock-landing
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    restart: unless-stopped
+    networks:
+      - imperblock-network
+
+  # Servicio de desarrollo (opcional)
+  imperblock-dev:
+    image: node:20-alpine
+    container_name: imperblock-dev
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
+    command: sh -c "npm install && npm run dev"
+    networks:
+      - imperblock-network
+
+networks:
+  imperblock-network:
+    driver: bridge

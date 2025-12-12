@@ -1,0 +1,34 @@
+# Ignorar archivos de Docker
+node_modules
+npm-debug.log
+.next
+.git
+.gitignore
+README.md
+DOCUMENTACION_TECNICA.md
+INFORME_ESTILOS.md
+*.md
+
+# Archivos de desarrollo
+.vscode
+.idea
+
+# Archivos de build
+out
+dist
+build
+
+# Logs
+*.log
+logs
+
+# Variables de entorno
+.env
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# GitHub
+.github
