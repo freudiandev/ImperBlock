@@ -166,46 +166,46 @@ export default function Home() {
         </header>
 
         <main>
-          <article id="inicio" className="hero-ecu container">
-            <div className="hero-copy">
-              <p className="eyebrow">Tecnología adaptada al clima andino</p>
-              <h1>Impermeabilización Definitiva en Quito y Valles</h1>
-              <p className="lead">
-                Quitamos humedad y goteras con métodos que resisten radiación UV y lluvias concentradas. Diagnóstico técnico, materiales
-                certificados y garantía escrita.
-              </p>
-              <div className="cta-row">
-                <a
-                  className="btn primary"
-                  aria-label="Cotizar inspección Imperblock por WhatsApp"
-                  href="https://wa.me/593959785062?text=Quiero%20una%20inspeccion%20Imperblock"
-                >
-                  Cotizar por WhatsApp
-                </a>
-                <a className="btn ghost" aria-label="Llamar a un ingeniero de Imperblock" href="tel:+593959785062">
-                  Llamar a un ingeniero
-                </a>
-              </div>
-              <ul className="hero-points">
-                <li>Garantía escrita y mantenimiento preventivo</li>
-                <li>Diagnóstico según altura 2.850 m y dilataciones térmicas</li>
-                <li>Respuesta rápida en Quito, Cumbayá y Los Chillos</li>
-              </ul>
+          <article id="inicio" className="hero-ecu hero-with-video" aria-label="Impermeabilización técnica en Quito">
+            <div className="hero-video-bg" aria-hidden="true">
+              <video
+                src="/videos/1.mp4"
+                poster="/images/a.jpg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+              <div className="hero-overlay"></div>
             </div>
-            <figure className="hero-media">
-              <picture>
-                <source srcSet="/images/a.webp" type="image/webp" />
-                <img
-                  src="/images/a.jpg"
-                  alt="Equipo Imperblock impermeabilizando losa en Quito"
-                  loading="lazy"
-                  decoding="async"
-                  width="720"
-                  height="540"
-                />
-              </picture>
-              <figcaption>Ensayos de adherencia y sellado UV en losas de Quito.</figcaption>
-            </figure>
+            <div className="container hero-grid">
+              <div className="hero-copy">
+                <p className="eyebrow">Tecnología adaptada al clima andino</p>
+                <h1>Impermeabilización Definitiva en Quito y Valles</h1>
+                <p className="lead">
+                  Quitamos humedad y goteras con métodos que resisten radiación UV y lluvias concentradas. Diagnóstico técnico, materiales
+                  certificados y garantía escrita.
+                </p>
+                <div className="cta-row">
+                  <a
+                    className="btn primary"
+                    aria-label="Cotizar inspección Imperblock por WhatsApp"
+                    href="https://wa.me/593959785062?text=Quiero%20una%20inspeccion%20Imperblock"
+                  >
+                    Cotizar por WhatsApp
+                  </a>
+                  <a className="btn ghost" aria-label="Llamar a un ingeniero de Imperblock" href="tel:+593959785062">
+                    Llamar a un ingeniero
+                  </a>
+                </div>
+                <ul className="hero-points">
+                  <li>Garantía escrita y mantenimiento preventivo</li>
+                  <li>Diagnóstico según altura 2.850 m y dilataciones térmicas</li>
+                  <li>Respuesta rápida en Quito, Cumbayá y Los Chillos</li>
+                </ul>
+              </div>
+            </div>
           </article>
 
           <section id="por-que" className="section container" aria-label="Causas de humedad en Quito">
@@ -295,6 +295,61 @@ export default function Home() {
                   <li>Intervención limpia en zonas habitadas</li>
                 </ul>
               </article>
+            </div>
+          </section>
+
+          <section id="proyectos" className="section container" aria-label="Proyectos recientes">
+            <h2>¿Cómo se ven nuestros trabajos en Quito?</h2>
+            <p className="muted">Casos reales en losas, cisternas y paredes intervenidas en Quito, Cumbayá y Los Chillos.</p>
+            <div className="gallery-grid">
+              <figure>
+                <picture>
+                  <source srcSet="/images/e.webp" type="image/webp" />
+                  <img src="/images/e.jpg" alt="Losa impermeabilizada con manto asfáltico en Quito" loading="lazy" decoding="async" width="320" height="220" />
+                </picture>
+              </figure>
+              <figure>
+                <picture>
+                  <source srcSet="/images/f.webp" type="image/webp" />
+                  <img src="/images/f.jpg" alt="Aplicación de imprimación acrílica en terraza" loading="lazy" decoding="async" width="320" height="220" />
+                </picture>
+              </figure>
+              <figure>
+                <picture>
+                  <source srcSet="/images/g.webp" type="image/webp" />
+                  <img src="/images/g.jpg" alt="Detalle de sellado UV en cubierta" loading="lazy" decoding="async" width="320" height="220" />
+                </picture>
+              </figure>
+              <figure>
+                <picture>
+                  <source srcSet="/images/h.webp" type="image/webp" />
+                  <img src="/images/h.jpg" alt="Impermeabilización en cisterna sanitaria" loading="lazy" decoding="async" width="320" height="220" />
+                </picture>
+              </figure>
+              <figure>
+                <picture>
+                  <source srcSet="/images/i.webp" type="image/webp" />
+                  <img src="/images/i.jpg" alt="Corrección de humedad en muros" loading="lazy" decoding="async" width="320" height="220" />
+                </picture>
+              </figure>
+              <figure>
+                <picture>
+                  <source srcSet="/images/j.webp" type="image/webp" />
+                  <img src="/images/j.jpg" alt="Revestimiento final listo para pintura" loading="lazy" decoding="async" width="320" height="220" />
+                </picture>
+              </figure>
+              <figure>
+                <picture>
+                  <source srcSet="/images/k.webp" type="image/webp" />
+                  <img src="/images/k.jpg" alt="Equipo Imperblock aplicando membrana líquida" loading="lazy" decoding="async" width="320" height="220" />
+                </picture>
+              </figure>
+              <figure>
+                <picture>
+                  <source srcSet="/images/l.webp" type="image/webp" />
+                  <img src="/images/l.jpg" alt="Sellado de juntas y perímetros en terraza" loading="lazy" decoding="async" width="320" height="220" />
+                </picture>
+              </figure>
             </div>
           </section>
 
