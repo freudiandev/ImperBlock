@@ -437,15 +437,15 @@ p, li, .lead, .muted {
 }
 
 .brand-icon-img{
-  width:36px;
-  height:36px;
+  width:30px;
+  height:30px;
   object-fit:contain;
   border-radius:8px;
 }
 
 .brand-name{
   font-weight:800;
-  font-size:1.05rem;
+  font-size:1rem;
   margin:0;
   color:var(--brand-color);
 }
@@ -459,14 +459,14 @@ p, li, .lead, .muted {
 .main-nav{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap:10px;
 }
 
 .main-nav a{
   text-decoration:none;
   color:var(--brand-color);
   font-weight:700;
-  padding:10px 14px;
+  padding:10px 12px;
   border-radius:10px;
   transition:all 0.25s ease;
 }

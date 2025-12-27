@@ -244,8 +244,10 @@ export default function Home() {
               </div>
             </div>
             <nav className="main-nav d-none d-lg-flex" aria-label="Navegación principal">
+              <a href="#inicio">Inicio</a>
+              <a href="#por-que">Causas</a>
               <a href="#servicios">Servicios</a>
-              <a href="#local-trust">Experiencia local</a>
+              <a href="#proyectos">Proyectos</a>
               <a href="#faq">FAQ</a>
               <a href="#contacto">Contacto</a>
             </nav>
