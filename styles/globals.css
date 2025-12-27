@@ -320,6 +320,15 @@ p, li, .lead, .muted {
     padding-left:0;
     padding-right:0;
   }
+
+  .top-bar{
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+  .bar-inner{
+    padding:14px 0;
+  }
 }
 
 /* ======================
