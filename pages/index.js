@@ -195,9 +195,10 @@ export default function Home() {
         />
         <meta name="keywords" content="Chova, Manto asfáltico, Humedad por capilaridad, Impermeabilizante acrílico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index,follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#0f172a" />
         <link rel="canonical" href="https://impermebilizacion.uio.ec/" />
+        <link rel="manifest" href="/manifest.json" />
         {/* OG/Twitter/Telegram/WhatsApp/Reddit meta keep geo-benefit message consistent across engines */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Imperblock | Impermeabilización y Construcción en Quito | Garantía Certificada" />
@@ -450,11 +451,11 @@ export default function Home() {
                 ['f','Aplicación de imprimación acrílica en terraza'],
                 ['g','Detalle de sellado UV en cubierta'],
                 ['h','Impermeabilización en cisterna sanitaria'],
-                ['i','Corrección de humedad en muros'],
-                ['j','Revestimiento final listo para pintura'],
-                ['k','Equipo Imperblock aplicando membrana líquida'],
-                ['l','Sellado de juntas y perímetros en terraza']].map(([letter, alt]) => (
-                  <div className="col-6 col-md-6 col-lg-4" key={letter}>
+              ['i','Corrección de humedad en muros'],
+              ['j','Revestimiento final listo para pintura'],
+              ['k','Equipo Imperblock aplicando membrana líquida'],
+              ['l','Sellado de juntas y perímetros en terraza']].map(([letter, alt]) => (
+                  <div className="col-6 col-md-6 col-lg-6" key={letter}>
                     <figure>
                       <picture>
                         <source srcSet={`/images/${letter}.webp`} type="image/webp" />
@@ -653,6 +654,13 @@ export default function Home() {
             href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
           >
             WhatsApp Imperblock
+          </a>
+        </div>
+
+        <div className="fab-whatsapp" aria-label="Botón flotante de WhatsApp">
+          <a href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock" aria-label="Abrir WhatsApp Imperblock rápido">
+            <i className="fab fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp
           </a>
         </div>
       </div>
