@@ -103,6 +103,78 @@ const schemaData = {
             '@type': 'Answer',
             'text': 'Imperblock aplica un sistema mixto: imprimación acrílica, manto asfáltico con refuerzo de poliéster y sellado UV. Evaluamos juntas, pendientes y dilataciones para que funcione en la altitud de Quito y entregamos garantía certificada.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cada cuánto necesita mantenimiento mi impermeabilización?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Incluimos visita anual preventiva para revisar juntas, bajantes y sellos. Si detectamos fisuras, intervenimos antes de que aparezcan goteras.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Funciona en Los Chillos, Cumbayá y valles con lluvias fuertes?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sí. Ajustamos pendientes, reforzamos perímetros y usamos sistemas con alta resistencia a lluvias concentradas y radiación UV del valle.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Pueden reparar filtraciones y salitre existentes?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Retiramos material suelto, tratamos capilaridad y salitre con barreras químicas y morteros transpirables antes de sellar con el nuevo sistema.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuánto tarda impermeabilizar una losa de 100 m²?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Entre 2 y 4 días según el estado de la superficie y el clima. Incluye preparación, aplicación por capas y curado controlado.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Pueden impermeabilizar cisternas de agua potable?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sí. Usamos sistemas epóxicos y cementicios certificados para uso sanitario, con pruebas de estanqueidad antes de entregar.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿La garantía es escrita y transferible?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Entregamos garantía escrita; si vendes la propiedad puedes transferirla previo registro del nuevo propietario.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Trabajan impermeabilización transitable para terrazas?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Instalamos mantos y sistemas líquidos transitables, con refuerzos en tránsito y protección UV para evitar desgaste prematuro.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cómo es el proceso de cotización?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Agendamos visita técnica gratuita, hacemos diagnóstico y entregamos presupuesto detallado por m² con materiales y tiempos definidos.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Atienden emergencias por goteras en temporada de lluvia?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sí. Podemos realizar sellos provisionales de contención y programar la solución definitiva cuando el clima lo permita.'
+          }
         }
       ]
     }
@@ -454,29 +526,79 @@ export default function Home() {
           </aside>
 
           <section id="faq" className="section container" aria-label="Preguntas frecuentes">
-            <h2>¿Cuál es el mejor impermeabilizante para losas en Quito?</h2>
-            <p>
-              Usamos sistema mixto: imprimación acrílica, manto asfáltico con refuerzo de poliéster y sellado UV. Evaluamos pendientes,
-              juntas y dilataciones antes de aplicar para que no se levante con el sol de Quito.
-            </p>
+            <h2>Preguntas frecuentes de impermeabilización en Quito</h2>
+            <div className="qa-grid faq-grid">
+              <article>
+                <h3>¿Cuál es el mejor impermeabilizante para losas en Quito?</h3>
+                <p>Usamos sistema mixto: imprimación acrílica, manto asfáltico reforzado y sellado UV para soportar radiación y lluvia.</p>
+              </article>
+              <article>
+                <h3>¿Cada cuánto necesita mantenimiento mi impermeabilización?</h3>
+                <p>Incluimos visita anual preventiva; revisamos juntas y sellos y corregimos fisuras antes de que aparezcan goteras.</p>
+              </article>
+              <article>
+                <h3>¿Funciona en Los Chillos, Cumbayá y valles?</h3>
+                <p>Sí. Ajustamos pendientes y refuerzos para lluvias concentradas y alta radiación UV del valle.</p>
+              </article>
+              <article>
+                <h3>¿Pueden reparar filtraciones y salitre existentes?</h3>
+                <p>Tratamos capilaridad con barreras químicas, retiramos material suelto y sellamos antes de aplicar el nuevo sistema.</p>
+              </article>
+              <article>
+                <h3>¿Cuánto tarda impermeabilizar una losa de 100 m²?</h3>
+                <p>Entre 2 y 4 días según estado y clima: preparación, aplicación por capas y curado controlado.</p>
+              </article>
+              <article>
+                <h3>¿Pueden impermeabilizar cisternas de agua potable?</h3>
+                <p>Usamos sistemas epóxicos y cementicios certificados para uso sanitario y realizamos pruebas de estanqueidad.</p>
+              </article>
+              <article>
+                <h3>¿La garantía es escrita y transferible?</h3>
+                <p>Entregamos garantía escrita; si vendes la propiedad, puedes transferirla registrando al nuevo propietario.</p>
+              </article>
+              <article>
+                <h3>¿Trabajan impermeabilización transitable para terrazas?</h3>
+                <p>Instalamos sistemas transitables con refuerzo en perímetros y protección UV para evitar desgaste prematuro.</p>
+              </article>
+              <article>
+                <h3>¿Cómo es el proceso de cotización?</h3>
+                <p>Visita técnica gratuita, diagnóstico y presupuesto detallado por m² con materiales y tiempos definidos.</p>
+              </article>
+              <article>
+                <h3>¿Atienden emergencias por goteras en temporada de lluvia?</h3>
+                <p>Podemos sellar provisionalmente y agendar la solución definitiva cuando el clima lo permita.</p>
+              </article>
+            </div>
           </section>
 
-          <section id="contacto" className="section alt container" aria-label="Contacto y cotización">
-            <h2>¿Listo para eliminar la humedad?</h2>
-            <p>Agenda una inspección gratuita. Respondemos por WhatsApp en minutos.</p>
-            <div className="cta-row">
-              <a
-                className="btn primary"
-                aria-label="Hablar con Imperblock por WhatsApp"
-                href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
-              >
-                Hablar ahora
-              </a>
-              <a className="btn ghost" aria-label="Enviar correo a Imperblock" href="mailto:contacto@imperblock.ec">
-                Enviar correo
-              </a>
+          <section id="contacto" className="section contact-section" aria-label="Contacto y cotización">
+            <div className="container contact-panel">
+              <div className="contact-copy">
+                <h2>¿Listo para eliminar la humedad?</h2>
+                <p className="lead">Agenda inspección gratuita. Respuesta inmediata por WhatsApp o llamada directa.</p>
+                <div className="contact-badges">
+                  <span>Quito · Cumbayá · Los Chillos</span>
+                  <span>Ingeniería ecuatoriana</span>
+                  <span>Garantía escrita</span>
+                </div>
+              </div>
+              <div className="contact-actions">
+                <a
+                  className="btn primary"
+                  aria-label="Hablar con Imperblock por WhatsApp"
+                  href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
+                >
+                  WhatsApp inmediato
+                </a>
+                <a className="btn ghost" aria-label="Llamar a Imperblock" href="tel:+593959785062">
+                  Llamar ahora
+                </a>
+                <a className="contact-link" href="mailto:contacto@imperblock.ec" aria-label="Enviar correo a Imperblock">
+                  contacto@imperblock.ec
+                </a>
+                <p className="contact-meta">Atendemos Quito, Cumbayá, Los Chillos y Pichincha.</p>
+              </div>
             </div>
-            <p className="muted contact-meta">Atendemos Quito, Cumbayá, Los Chillos y Pichincha.</p>
           </section>
         </main>
 

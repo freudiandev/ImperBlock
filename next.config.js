@@ -11,6 +11,18 @@ const nextConfig = {
   assetPrefix: '',
   basePath: '',
   
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'index, follow' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' }
+        ],
+      },
+    ];
+  },
+  
   // Generate unique build ID for cache busting
   generateBuildId: async () => {
     // Usar timestamp para forzar actualización en cada deploy
