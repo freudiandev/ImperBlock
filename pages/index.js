@@ -191,7 +191,7 @@ export default function Home() {
         <title>Imperblock | Impermeabilización y Construcción en Quito | Garantía Certificada</title>
         <meta
           name="description"
-          content="Expertos en eliminar humedad y goteras con tecnología adaptada al clima de Quito. 10 años protegiendo hogares ecuatorianos. ¡Cotización gratuita vía WhatsApp!"
+          content="Expertos en eliminar humedad y goteras en Quito con tecnología adaptada al clima andino: Chova, manto asfáltico, impermeabilizante acrílico y tratamiento de humedad por capilaridad. 10 años protegiendo hogares ecuatorianos. ¡Cotización gratuita vía WhatsApp!"
         />
         <meta name="keywords" content="Chova, Manto asfáltico, Humedad por capilaridad, Impermeabilizante acrílico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -373,7 +373,7 @@ export default function Home() {
 
           <section id="servicios" className="section alt container" aria-label="Servicios principales">
             <h2>¿Cómo impermeabilizamos tu losa, cisterna o pared?</h2>
-            <div className="row g-3 service-grid">
+            <div className="row g-4 service-grid">
               <div className="col-12 col-md-6 col-lg-4 d-flex">
                 <article className="service-card w-100">
                   <picture>
@@ -383,8 +383,7 @@ export default function Home() {
                       alt="Impermeabilización de losa con manto asfáltico"
                       loading="lazy"
                       decoding="async"
-                      width="400"
-                      height="260"
+                      className="img-fluid"
                     />
                   </picture>
                   <h3>¿Cuál es el método para losas?</h3>
@@ -406,8 +405,7 @@ export default function Home() {
                       alt="Revestimiento sanitario de cisterna"
                       loading="lazy"
                       decoding="async"
-                      width="400"
-                      height="260"
+                      className="img-fluid"
                     />
                   </picture>
                   <h3>¿Cómo sellamos cisternas?</h3>
@@ -429,8 +427,7 @@ export default function Home() {
                       alt="Tratamiento de humedad en paredes"
                       loading="lazy"
                       decoding="async"
-                      width="400"
-                      height="260"
+                      className="img-fluid"
                     />
                   </picture>
                   <h3>¿Cómo frenamos la humedad en paredes?</h3>
@@ -448,7 +445,7 @@ export default function Home() {
           <section id="proyectos" className="section container" aria-label="Proyectos recientes">
             <h2>¿Cómo se ven nuestros trabajos en Quito?</h2>
             <p className="muted">Casos reales en losas, cisternas y paredes intervenidas en Quito, Cumbayá y Los Chillos.</p>
-            <div className="row g-3 gallery-grid">
+            <div className="row g-4 gallery-grid">
               {[['e','Losa impermeabilizada con manto asfáltico en Quito'],
                 ['f','Aplicación de imprimación acrílica en terraza'],
                 ['g','Detalle de sellado UV en cubierta'],
@@ -457,11 +454,11 @@ export default function Home() {
                 ['j','Revestimiento final listo para pintura'],
                 ['k','Equipo Imperblock aplicando membrana líquida'],
                 ['l','Sellado de juntas y perímetros en terraza']].map(([letter, alt]) => (
-                  <div className="col-6 col-md-3" key={letter}>
+                  <div className="col-6 col-md-4 col-lg-3" key={letter}>
                     <figure>
                       <picture>
                         <source srcSet={`/images/${letter}.webp`} type="image/webp" />
-                        <img src={`/images/${letter}.jpg`} alt={alt} loading="lazy" decoding="async" width="320" height="220" />
+                        <img src={`/images/${letter}.jpg`} alt={alt} loading="lazy" decoding="async" className="img-fluid" />
                       </picture>
                     </figure>
                   </div>
@@ -472,8 +469,7 @@ export default function Home() {
           <section id="local-trust" className="section container" aria-label="Experiencia en clima ecuatoriano">
             <h2>Experiencia en Clima Ecuatoriano</h2>
             <p>
-              20+ años trabajando en Quito, Cumbayá y Los Chillos. Adaptamos sistemas a radiación UV alta, granizadas y cambios térmicos
-              bruscos.
+              40 años trabajando en Quito, Cumbayá y Los Chillos. Adaptamos sistemas a radiación UV alta, granizadas y cambios térmicos bruscos.
             </p>
             <div className="trust-grid">
               <article>

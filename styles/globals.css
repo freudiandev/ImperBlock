@@ -1404,6 +1404,7 @@ p, li, .lead, .muted {
   width:100%;
   height:auto;
   border-radius:10px;
+  display:block;
 }
 
 .service-card h3{
@@ -1480,12 +1481,6 @@ p, li, .lead, .muted {
   border-radius:999px;
   font-weight:700;
   text-decoration:none;
-}
-
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:14px;
 }
 
 .gallery-grid figure{
