@@ -77,7 +77,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
+      <div className={`mobile-menu d-lg-none ${isOpen ? 'active' : ''}`}>
         <nav className="mobile-nav">
           <a href="#servicios" className="mobile-nav-link" onClick={closeMenu}>
             <i className="fas fa-wrench"></i>
