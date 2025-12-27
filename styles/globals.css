@@ -1342,12 +1342,30 @@ p, li, .lead, .muted {
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 }
 
-.service-grid{
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+.faq-grid details{
+  background:#fff;
+  border:1px solid rgba(24,47,92,0.08);
+  border-radius:12px;
+  padding:14px 16px;
+  box-shadow:0 8px 24px rgba(15,23,42,0.08);
 }
 
-.trust-grid{
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+.faq-grid summary{
+  cursor:pointer;
+  font-weight:700;
+  color:var(--brand-color);
+  outline:none;
+}
+
+.faq-grid p{
+  margin-top:8px;
+  color:var(--brand-dark);
+}
+
+.service-grid,
+.faq-grid,
+.gallery-grid{
+  display:block;
 }
 
 .service-card{

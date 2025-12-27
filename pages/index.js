@@ -5,11 +5,11 @@ const schemaData = {
   '@graph': [
     {
       '@type': 'HomeAndConstructionBusiness',
-      '@id': 'https://imperblock.ec/#business',
+      '@id': 'https://impermebilizacion.uio.ec/#business',
       'name': 'Imperblock - Soluciones Técnicas Ecuador',
-      'url': 'https://imperblock.ec/',
-      'image': 'https://imperblock.ec/images/a.webp',
-      'logo': 'https://imperblock.ec/images/logo.png',
+      'url': 'https://impermebilizacion.uio.ec/',
+      'image': 'https://impermebilizacion.uio.ec/images/a.webp',
+      'logo': 'https://impermebilizacion.uio.ec/images/logo.png',
       'description': 'Impermeabilización técnica y construcción adaptada al clima andino de Quito, Cumbayá, Los Chillos y Pichincha.',
       'telephone': '+593959785062',
       'priceRange': '$$',
@@ -84,17 +84,17 @@ const schemaData = {
     },
     {
       '@type': 'Service',
-      '@id': 'https://imperblock.ec/#service',
+      '@id': 'https://impermebilizacion.uio.ec/#service',
       'name': 'Impermeabilización certificada para clima andino',
       'serviceType': ['Impermeabilización de losas', 'Impermeabilización de cisternas', 'Corrección de humedad en paredes'],
-      'provider': { '@id': 'https://imperblock.ec/#business' },
+      'provider': { '@id': 'https://impermebilizacion.uio.ec/#business' },
       'areaServed': ['Quito', 'Cumbayá', 'Los Chillos', 'Pichincha'],
       'audience': { '@type': 'Audience', 'audienceType': 'Propietarios y administradores de edificios en Quito' },
       'termsOfService': 'Garantía escrita según sistema aplicado.'
     },
     {
       '@type': 'FAQPage',
-      '@id': 'https://imperblock.ec/#faq',
+      '@id': 'https://impermebilizacion.uio.ec/#faq',
       'mainEntity': [
         {
           '@type': 'Question',
@@ -182,7 +182,7 @@ const schemaData = {
 }
 
 export default function Home() {
-  const ogImage = 'https://imperblock.ec/images/opengraph.png'
+  const ogImage = 'https://impermebilizacion.uio.ec/images/opengraph.png'
   return (
     <>
       <Head>
@@ -195,7 +195,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index,follow" />
         <meta name="theme-color" content="#0f172a" />
-        <link rel="canonical" href="https://imperblock.ec/" />
+        <link rel="canonical" href="https://impermebilizacion.uio.ec/" />
         {/* OG/Twitter/Telegram/WhatsApp/Reddit meta keep geo-benefit message consistent across engines */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Imperblock | Impermeabilización y Construcción en Quito | Garantía Certificada" />
@@ -204,7 +204,7 @@ export default function Home() {
           content="Tecnología adaptada al clima andino de Quito. Eliminamos humedad y goteras con garantía certificada."
         />
         <meta property="og:site_name" content="Imperblock - Soluciones Técnicas Ecuador" />
-        <meta property="og:url" content="https://imperblock.ec/" />
+        <meta property="og:url" content="https://impermebilizacion.uio.ec/" />
         <meta property="og:locale" content="es_EC" />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:secure_url" content={ogImage} />
@@ -273,30 +273,34 @@ export default function Home() {
               <div className="hero-overlay"></div>
             </div>
             <div className="container hero-grid">
-              <div className="hero-copy">
-                <p className="eyebrow">Tecnología adaptada al clima andino</p>
-                <h1>Impermeabilización Definitiva en Quito y Valles</h1>
-                <p className="lead">
-                  Quitamos humedad y goteras con métodos que resisten radiación UV y lluvias concentradas. Diagnóstico técnico, materiales
-                  certificados y garantía escrita.
-                </p>
-                <div className="cta-row">
-                  <a
-                    className="btn primary"
-                    aria-label="Cotizar inspección Imperblock por WhatsApp"
-                    href="https://wa.me/593959785062?text=Quiero%20una%20inspeccion%20Imperblock"
-                  >
-                    Cotizar por WhatsApp
-                  </a>
-                  <a className="btn ghost" aria-label="Llamar a un ingeniero de Imperblock" href="tel:+593959785062">
-                    Llamar a un ingeniero
-                  </a>
+              <div className="row align-items-center">
+                <div className="col-12 col-lg-8">
+                  <div className="hero-copy">
+                    <p className="eyebrow"><strong>Tecnología adaptada al clima andino</strong></p>
+                    <h1>Impermeabilización Definitiva en Quito y Valles</h1>
+                    <p className="lead">
+                      Quitamos humedad y goteras con métodos que resisten radiación UV y lluvias concentradas. Diagnóstico técnico, materiales
+                      certificados y garantía escrita.
+                    </p>
+                    <div className="cta-row">
+                      <a
+                        className="btn primary"
+                        aria-label="Cotizar inspección Imperblock por WhatsApp"
+                        href="https://wa.me/593959785062?text=Quiero%20una%20inspeccion%20Imperblock"
+                      >
+                        Cotizar por WhatsApp
+                      </a>
+                      <a className="btn ghost" aria-label="Llamar a un ingeniero de Imperblock" href="tel:+593959785062">
+                        Llamar a un ingeniero
+                      </a>
+                    </div>
+                    <ul className="hero-points">
+                      <li>Garantía escrita y mantenimiento preventivo</li>
+                      <li>Diagnóstico según altura <em>2.850 m</em> y dilataciones térmicas</li>
+                      <li>Respuesta rápida en Quito, Cumbayá y Los Chillos</li>
+                    </ul>
+                  </div>
                 </div>
-                <ul className="hero-points">
-                  <li>Garantía escrita y mantenimiento preventivo</li>
-                  <li>Diagnóstico según altura 2.850 m y dilataciones térmicas</li>
-                  <li>Respuesta rápida en Quito, Cumbayá y Los Chillos</li>
-                </ul>
               </div>
             </div>
           </article>
@@ -325,124 +329,99 @@ export default function Home() {
 
           <section id="servicios" className="section alt container" aria-label="Servicios principales">
             <h2>¿Cómo impermeabilizamos tu losa, cisterna o pared?</h2>
-            <div className="service-grid">
-              <article className="service-card">
-                <picture>
-                  <source srcSet="/images/b.webp" type="image/webp" />
-                  <img
-                    src="/images/b.jpg"
-                    alt="Impermeabilización de losa con manto asfáltico"
-                    loading="lazy"
-                    decoding="async"
-                    width="400"
-                    height="260"
-                  />
-                </picture>
-                <h3>¿Cuál es el método para losas?</h3>
-                <p>Imprimación acrílica, manto asfáltico reforzado y sellado UV para soportar sol ecuatoriano.</p>
-                <ul>
-                  <li>Chova y manto asfáltico certificado</li>
-                  <li>Refuerzo de juntas y bajantes</li>
-                  <li>Garantía 5 años + visita anual</li>
-                </ul>
-              </article>
+            <div className="row g-3 service-grid">
+              <div className="col-12 col-md-6 col-lg-4 d-flex">
+                <article className="service-card w-100">
+                  <picture>
+                    <source srcSet="/images/b.webp" type="image/webp" />
+                    <img
+                      src="/images/b.jpg"
+                      alt="Impermeabilización de losa con manto asfáltico"
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="260"
+                    />
+                  </picture>
+                  <h3>¿Cuál es el método para losas?</h3>
+                  <p>Imprimación acrílica, manto asfáltico reforzado y sellado UV para soportar sol ecuatoriano.</p>
+                  <ul>
+                    <li>Chova y manto asfáltico certificado</li>
+                    <li>Refuerzo de juntas y bajantes</li>
+                    <li>Garantía 5 años + visita anual</li>
+                  </ul>
+                </article>
+              </div>
 
-              <article className="service-card">
-                <picture>
-                  <source srcSet="/images/c.webp" type="image/webp" />
-                  <img
-                    src="/images/c.jpg"
-                    alt="Revestimiento sanitario de cisterna"
-                    loading="lazy"
-                    decoding="async"
-                    width="400"
-                    height="260"
-                  />
-                </picture>
-                <h3>¿Cómo sellamos cisternas?</h3>
-                <p>Revestimiento epóxico y cementicio con acabado sanitario para agua potable.</p>
-                <ul>
-                  <li>Pruebas de estanqueidad</li>
-                  <li>Tratamiento de fisuras y anclajes</li>
-                  <li>Certificado de calidad de agua</li>
-                </ul>
-              </article>
+              <div className="col-12 col-md-6 col-lg-4 d-flex">
+                <article className="service-card w-100">
+                  <picture>
+                    <source srcSet="/images/c.webp" type="image/webp" />
+                    <img
+                      src="/images/c.jpg"
+                      alt="Revestimiento sanitario de cisterna"
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="260"
+                    />
+                  </picture>
+                  <h3>¿Cómo sellamos cisternas?</h3>
+                  <p>Revestimiento epóxico y cementicio con acabado sanitario para agua potable.</p>
+                  <ul>
+                    <li>Pruebas de estanqueidad</li>
+                    <li>Tratamiento de fisuras y anclajes</li>
+                    <li>Certificado de calidad de agua</li>
+                  </ul>
+                </article>
+              </div>
 
-              <article className="service-card">
-                <picture>
-                  <source srcSet="/images/d.webp" type="image/webp" />
-                  <img
-                    src="/images/d.jpg"
-                    alt="Tratamiento de humedad en paredes"
-                    loading="lazy"
-                    decoding="async"
-                    width="400"
-                    height="260"
-                  />
-                </picture>
-                <h3>¿Cómo frenamos la humedad en paredes?</h3>
-                <p>Barrera química y morteros flexibles que permiten respirar al muro sin filtraciones.</p>
-                <ul>
-                  <li>Diagnóstico de capilaridad y filtración</li>
-                  <li>Acabados listos para pintura</li>
-                  <li>Intervención limpia en zonas habitadas</li>
-                </ul>
-              </article>
+              <div className="col-12 col-md-6 col-lg-4 d-flex">
+                <article className="service-card w-100">
+                  <picture>
+                    <source srcSet="/images/d.webp" type="image/webp" />
+                    <img
+                      src="/images/d.jpg"
+                      alt="Tratamiento de humedad en paredes"
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="260"
+                    />
+                  </picture>
+                  <h3>¿Cómo frenamos la humedad en paredes?</h3>
+                  <p>Barrera química y morteros flexibles que permiten respirar al muro sin filtraciones.</p>
+                  <ul>
+                    <li>Diagnóstico de capilaridad y filtración</li>
+                    <li>Acabados listos para pintura</li>
+                    <li>Intervención limpia en zonas habitadas</li>
+                  </ul>
+                </article>
+              </div>
             </div>
           </section>
 
           <section id="proyectos" className="section container" aria-label="Proyectos recientes">
             <h2>¿Cómo se ven nuestros trabajos en Quito?</h2>
             <p className="muted">Casos reales en losas, cisternas y paredes intervenidas en Quito, Cumbayá y Los Chillos.</p>
-            <div className="gallery-grid">
-              <figure>
-                <picture>
-                  <source srcSet="/images/e.webp" type="image/webp" />
-                  <img src="/images/e.jpg" alt="Losa impermeabilizada con manto asfáltico en Quito" loading="lazy" decoding="async" width="320" height="220" />
-                </picture>
-              </figure>
-              <figure>
-                <picture>
-                  <source srcSet="/images/f.webp" type="image/webp" />
-                  <img src="/images/f.jpg" alt="Aplicación de imprimación acrílica en terraza" loading="lazy" decoding="async" width="320" height="220" />
-                </picture>
-              </figure>
-              <figure>
-                <picture>
-                  <source srcSet="/images/g.webp" type="image/webp" />
-                  <img src="/images/g.jpg" alt="Detalle de sellado UV en cubierta" loading="lazy" decoding="async" width="320" height="220" />
-                </picture>
-              </figure>
-              <figure>
-                <picture>
-                  <source srcSet="/images/h.webp" type="image/webp" />
-                  <img src="/images/h.jpg" alt="Impermeabilización en cisterna sanitaria" loading="lazy" decoding="async" width="320" height="220" />
-                </picture>
-              </figure>
-              <figure>
-                <picture>
-                  <source srcSet="/images/i.webp" type="image/webp" />
-                  <img src="/images/i.jpg" alt="Corrección de humedad en muros" loading="lazy" decoding="async" width="320" height="220" />
-                </picture>
-              </figure>
-              <figure>
-                <picture>
-                  <source srcSet="/images/j.webp" type="image/webp" />
-                  <img src="/images/j.jpg" alt="Revestimiento final listo para pintura" loading="lazy" decoding="async" width="320" height="220" />
-                </picture>
-              </figure>
-              <figure>
-                <picture>
-                  <source srcSet="/images/k.webp" type="image/webp" />
-                  <img src="/images/k.jpg" alt="Equipo Imperblock aplicando membrana líquida" loading="lazy" decoding="async" width="320" height="220" />
-                </picture>
-              </figure>
-              <figure>
-                <picture>
-                  <source srcSet="/images/l.webp" type="image/webp" />
-                  <img src="/images/l.jpg" alt="Sellado de juntas y perímetros en terraza" loading="lazy" decoding="async" width="320" height="220" />
-                </picture>
-              </figure>
+            <div className="row g-3 gallery-grid">
+              {[['e','Losa impermeabilizada con manto asfáltico en Quito'],
+                ['f','Aplicación de imprimación acrílica en terraza'],
+                ['g','Detalle de sellado UV en cubierta'],
+                ['h','Impermeabilización en cisterna sanitaria'],
+                ['i','Corrección de humedad en muros'],
+                ['j','Revestimiento final listo para pintura'],
+                ['k','Equipo Imperblock aplicando membrana líquida'],
+                ['l','Sellado de juntas y perímetros en terraza']].map(([letter, alt]) => (
+                  <div className="col-6 col-md-3" key={letter}>
+                    <figure>
+                      <picture>
+                        <source srcSet={`/images/${letter}.webp`} type="image/webp" />
+                        <img src={`/images/${letter}.jpg`} alt={alt} loading="lazy" decoding="async" width="320" height="220" />
+                      </picture>
+                    </figure>
+                  </div>
+                ))}
             </div>
           </section>
 
@@ -527,76 +506,57 @@ export default function Home() {
 
           <section id="faq" className="section container" aria-label="Preguntas frecuentes">
             <h2>Preguntas frecuentes de impermeabilización en Quito</h2>
-            <div className="qa-grid faq-grid">
-              <article>
-                <h3>¿Cuál es el mejor impermeabilizante para losas en Quito?</h3>
-                <p>Usamos sistema mixto: imprimación acrílica, manto asfáltico reforzado y sellado UV para soportar radiación y lluvia.</p>
-              </article>
-              <article>
-                <h3>¿Cada cuánto necesita mantenimiento mi impermeabilización?</h3>
-                <p>Incluimos visita anual preventiva; revisamos juntas y sellos y corregimos fisuras antes de que aparezcan goteras.</p>
-              </article>
-              <article>
-                <h3>¿Funciona en Los Chillos, Cumbayá y valles?</h3>
-                <p>Sí. Ajustamos pendientes y refuerzos para lluvias concentradas y alta radiación UV del valle.</p>
-              </article>
-              <article>
-                <h3>¿Pueden reparar filtraciones y salitre existentes?</h3>
-                <p>Tratamos capilaridad con barreras químicas, retiramos material suelto y sellamos antes de aplicar el nuevo sistema.</p>
-              </article>
-              <article>
-                <h3>¿Cuánto tarda impermeabilizar una losa de 100 m²?</h3>
-                <p>Entre 2 y 4 días según estado y clima: preparación, aplicación por capas y curado controlado.</p>
-              </article>
-              <article>
-                <h3>¿Pueden impermeabilizar cisternas de agua potable?</h3>
-                <p>Usamos sistemas epóxicos y cementicios certificados para uso sanitario y realizamos pruebas de estanqueidad.</p>
-              </article>
-              <article>
-                <h3>¿La garantía es escrita y transferible?</h3>
-                <p>Entregamos garantía escrita; si vendes la propiedad, puedes transferirla registrando al nuevo propietario.</p>
-              </article>
-              <article>
-                <h3>¿Trabajan impermeabilización transitable para terrazas?</h3>
-                <p>Instalamos sistemas transitables con refuerzo en perímetros y protección UV para evitar desgaste prematuro.</p>
-              </article>
-              <article>
-                <h3>¿Cómo es el proceso de cotización?</h3>
-                <p>Visita técnica gratuita, diagnóstico y presupuesto detallado por m² con materiales y tiempos definidos.</p>
-              </article>
-              <article>
-                <h3>¿Atienden emergencias por goteras en temporada de lluvia?</h3>
-                <p>Podemos sellar provisionalmente y agendar la solución definitiva cuando el clima lo permita.</p>
-              </article>
+            <div className="row g-3 faq-grid">
+              {[
+                ['¿Cuál es el mejor impermeabilizante para losas en Quito?', 'Usamos sistema mixto: imprimación acrílica, manto asfáltico reforzado y sellado UV para soportar radiación y lluvia.'],
+                ['¿Cada cuánto necesita mantenimiento mi impermeabilización?', 'Incluimos visita anual preventiva; revisamos juntas y sellos y corregimos fisuras antes de que aparezcan goteras.'],
+                ['¿Funciona en Los Chillos, Cumbayá y valles?', 'Sí. Ajustamos pendientes y refuerzos para lluvias concentradas y alta radiación UV del valle.'],
+                ['¿Pueden reparar filtraciones y salitre existentes?', 'Tratamos capilaridad con barreras químicas, retiramos material suelto y sellamos antes de aplicar el nuevo sistema.'],
+                ['¿Cuánto tarda impermeabilizar una losa de 100 m²?', 'Entre 2 y 4 días según estado y clima: preparación, aplicación por capas y curado controlado.'],
+                ['¿Pueden impermeabilizar cisternas de agua potable?', 'Usamos sistemas epóxicos y cementicios certificados para uso sanitario y realizamos pruebas de estanqueidad.'],
+                ['¿La garantía es escrita y transferible?', 'Entregamos garantía escrita; si vendes la propiedad, puedes transferirla registrando al nuevo propietario.'],
+                ['¿Trabajan impermeabilización transitable para terrazas?', 'Instalamos sistemas transitables con refuerzo en perímetros y protección UV para evitar desgaste prematuro.'],
+                ['¿Cómo es el proceso de cotización?', 'Visita técnica gratuita, diagnóstico y presupuesto detallado por m² con materiales y tiempos definidos.'],
+                ['¿Atienden emergencias por goteras en temporada de lluvia?', 'Podemos sellar provisionalmente y agendar la solución definitiva cuando el clima lo permita.'],
+              ].map(([q, a]) => (
+                <div className="col-12 col-md-6" key={q}>
+                  <details>
+                    <summary>{q}</summary>
+                    <p>{a}</p>
+                  </details>
+                </div>
+              ))}
             </div>
           </section>
 
           <section id="contacto" className="section contact-section" aria-label="Contacto y cotización">
-            <div className="container contact-panel">
-              <div className="contact-copy">
-                <h2>¿Listo para eliminar la humedad?</h2>
-                <p className="lead">Agenda inspección gratuita. Respuesta inmediata por WhatsApp o llamada directa.</p>
-                <div className="contact-badges">
-                  <span>Quito · Cumbayá · Los Chillos</span>
-                  <span>Ingeniería ecuatoriana</span>
-                  <span>Garantía escrita</span>
+            <div className="container">
+              <div className="row contact-panel">
+                <div className="col-12 col-lg-6 contact-copy">
+                  <h2>¿Listo para eliminar la humedad?</h2>
+                  <p className="lead">Agenda inspección gratuita. Respuesta inmediata por WhatsApp o llamada directa.</p>
+                  <div className="contact-badges">
+                    <span>Quito · Cumbayá · Los Chillos</span>
+                    <span>Ingeniería ecuatoriana</span>
+                    <span>Garantía escrita</span>
+                  </div>
                 </div>
-              </div>
-              <div className="contact-actions">
-                <a
-                  className="btn primary"
-                  aria-label="Hablar con Imperblock por WhatsApp"
-                  href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
-                >
-                  WhatsApp inmediato
-                </a>
-                <a className="btn ghost" aria-label="Llamar a Imperblock" href="tel:+593959785062">
-                  Llamar ahora
-                </a>
-                <a className="contact-link" href="mailto:contacto@imperblock.ec" aria-label="Enviar correo a Imperblock">
-                  contacto@imperblock.ec
-                </a>
-                <p className="contact-meta">Atendemos Quito, Cumbayá, Los Chillos y Pichincha.</p>
+                <div className="col-12 col-lg-6 contact-actions">
+                  <a
+                    className="btn primary"
+                    aria-label="Hablar con Imperblock por WhatsApp"
+                    href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
+                  >
+                    WhatsApp inmediato
+                  </a>
+                  <a className="btn ghost" aria-label="Llamar a Imperblock" href="tel:+593959785062">
+                    Llamar ahora
+                  </a>
+                  <a className="contact-link" href="mailto:contacto@imperblock.ec" aria-label="Enviar correo a Imperblock">
+                    contacto@imperblock.ec
+                  </a>
+                  <p className="contact-meta">Atendemos Quito, Cumbayá, Los Chillos y Pichincha.</p>
+                </div>
               </div>
             </div>
           </section>
