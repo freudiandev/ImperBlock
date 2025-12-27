@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useState } from 'react'
 
 const schemaData = {
   '@context': 'https://schema.org',
@@ -182,6 +183,7 @@ const schemaData = {
 }
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false)
   const ogImage = 'https://impermebilizacion.uio.ec/images/opengraph.png'
   return (
     <>
@@ -234,29 +236,71 @@ export default function Home() {
         <header className="top-bar" aria-label="Cabecera principal">
           <div className="container bar-inner">
             <div className="brand-mark">
-              <span className="brand-icon" role="img" aria-label="Gota de agua">
-                💧
-              </span>
+              <img src="/images/logo.png" alt="Imperblock Logo" className="brand-icon-img" />
               <div>
                 <span className="brand-name">Imperblock</span>
                 <p className="brand-tagline">Ingeniería ecuatoriana anti-humedad</p>
               </div>
             </div>
-            <nav className="main-nav" aria-label="Navegación principal">
+            <nav className="main-nav d-none d-lg-flex" aria-label="Navegación principal">
               <a href="#servicios">Servicios</a>
               <a href="#local-trust">Experiencia local</a>
               <a href="#faq">FAQ</a>
               <a href="#contacto">Contacto</a>
             </nav>
-            <a
-              className="cta-link"
-              aria-label="Abrir WhatsApp Imperblock"
-              href="https://wa.me/593959785062?text=Quiero%20una%20inspeccion%20Imperblock"
-            >
-              WhatsApp
-            </a>
+            <div className="nav-actions">
+              <a
+                className="cta-link d-none d-lg-inline-flex"
+                aria-label="Abrir WhatsApp Imperblock"
+                href="https://wa.me/593959785062?text=Quiero%20una%20inspeccion%20Imperblock"
+              >
+                WhatsApp
+              </a>
+              <button
+                className={`hamburger d-lg-none ${menuOpen ? 'active' : ''}`}
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Abrir menú móvil"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
           </div>
         </header>
+
+        <div className={`mobile-menu d-lg-none ${menuOpen ? 'active' : ''}`} aria-label="Menú móvil">
+          <nav className="mobile-nav">
+            <a href="#servicios" className="mobile-nav-link" onClick={() => setMenuOpen(false)}>
+              <i className="fas fa-wrench"></i>
+              <span>Servicios</span>
+            </a>
+            <a href="#local-trust" className="mobile-nav-link" onClick={() => setMenuOpen(false)}>
+              <i className="fas fa-map-marked-alt"></i>
+              <span>Experiencia local</span>
+            </a>
+            <a href="#faq" className="mobile-nav-link" onClick={() => setMenuOpen(false)}>
+              <i className="fas fa-question-circle"></i>
+              <span>FAQ</span>
+            </a>
+            <a href="#contacto" className="mobile-nav-link" onClick={() => setMenuOpen(false)}>
+              <i className="fas fa-phone-alt"></i>
+              <span>Contacto</span>
+            </a>
+            <div className="mobile-social">
+              <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Facebook Imperblock">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Instagram Imperblock">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://tiktok.com/@imperblock.ec" target="_blank" rel="noopener" aria-label="TikTok Imperblock">
+                <i className="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </nav>
+        </div>
+        {menuOpen && <div className="menu-backdrop d-lg-none" onClick={() => setMenuOpen(false)} />}
 
         <main>
           <article id="inicio" className="hero-ecu hero-with-video" aria-label="Impermeabilización técnica en Quito">

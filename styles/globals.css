@@ -1210,6 +1210,12 @@ p, li, .lead, .muted {
   font-size:1.5rem;
 }
 
+.brand-icon-img{
+  height:48px;
+  width:auto;
+  object-fit:contain;
+}
+
 .brand-name{
   font-weight:800;
   font-size:1.15rem;
