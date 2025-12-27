@@ -8,7 +8,7 @@ const schemaData = {
       '@id': 'https://imperblock.ec/#business',
       'name': 'Imperblock - Soluciones Técnicas Ecuador',
       'url': 'https://imperblock.ec/',
-      'image': 'https://imperblock.ec/images/hero-imperblock.webp',
+      'image': 'https://imperblock.ec/images/a.webp',
       'logo': 'https://imperblock.ec/images/logo.png',
       'description': 'Impermeabilización técnica y construcción adaptada al clima andino de Quito, Cumbayá, Los Chillos y Pichincha.',
       'telephone': '+593959785062',
@@ -131,7 +131,7 @@ export default function Home() {
         />
         <meta property="og:url" content="https://imperblock.ec/" />
         <meta property="og:locale" content="es_EC" />
-        <meta property="og:image" content="https://imperblock.ec/images/hero-imperblock.webp" />
+        <meta property="og:image" content="https://imperblock.ec/images/a.webp" />
         <link rel="icon" type="image/png" href="/images/logo.png" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
@@ -194,9 +194,9 @@ export default function Home() {
             </div>
             <figure className="hero-media">
               <picture>
-                <source srcSet="/images/hero-imperblock.webp" type="image/webp" />
+                <source srcSet="/images/a.webp" type="image/webp" />
                 <img
-                  src="/images/proyecto-1.jpg"
+                  src="/images/a.jpg"
                   alt="Equipo Imperblock impermeabilizando losa en Quito"
                   loading="lazy"
                   decoding="async"
@@ -235,9 +235,9 @@ export default function Home() {
             <div className="service-grid">
               <article className="service-card">
                 <picture>
-                  <source srcSet="/images/losas-imperblock.webp" type="image/webp" />
+                  <source srcSet="/images/b.webp" type="image/webp" />
                   <img
-                    src="/images/proyecto-2.jpg"
+                    src="/images/b.jpg"
                     alt="Impermeabilización de losa con manto asfáltico"
                     loading="lazy"
                     decoding="async"
@@ -256,9 +256,9 @@ export default function Home() {
 
               <article className="service-card">
                 <picture>
-                  <source srcSet="/images/cisternas-imperblock.webp" type="image/webp" />
+                  <source srcSet="/images/c.webp" type="image/webp" />
                   <img
-                    src="/images/proyecto-3.jpg"
+                    src="/images/c.jpg"
                     alt="Revestimiento sanitario de cisterna"
                     loading="lazy"
                     decoding="async"
@@ -277,9 +277,9 @@ export default function Home() {
 
               <article className="service-card">
                 <picture>
-                  <source srcSet="/images/paredes-imperblock.webp" type="image/webp" />
+                  <source srcSet="/images/d.webp" type="image/webp" />
                   <img
-                    src="/images/proyecto-4.jpg"
+                    src="/images/d.jpg"
                     alt="Tratamiento de humedad en paredes"
                     loading="lazy"
                     decoding="async"
