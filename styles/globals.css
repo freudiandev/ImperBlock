@@ -309,8 +309,8 @@ p, li, .lead, .muted {
   }
   
   .container{
-    padding-left:22px;
-    padding-right:22px;
+    padding-left:24px;
+    padding-right:24px;
   }
 
   main,
@@ -322,12 +322,34 @@ p, li, .lead, .muted {
   }
 
   .top-bar{
-    padding-left:12px;
-    padding-right:12px;
+    padding-left:16px;
+    padding-right:16px;
   }
 
   .bar-inner{
-    padding:14px 0;
+    padding:16px 0;
+  }
+}
+
+@media (max-width: 420px){
+  .container{
+    padding-left:26px;
+    padding-right:26px;
+  }
+
+  .top-bar{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .hero-ecu{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .section{
+    padding-left:18px;
+    padding-right:18px;
   }
 }
 
