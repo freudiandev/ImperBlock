@@ -15,6 +15,10 @@ const nextConfig = {
   },
   
   async headers() {
+    if (process.env.BUILD_MODE === 'export') {
+      // headers no-op for static export
+      return []
+    }
     return [
       {
         source: '/:path*',
