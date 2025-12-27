@@ -1331,6 +1331,17 @@ p, li, .lead, .muted {
   flex-wrap:wrap;
 }
 
+.footer-credit{
+  text-align:center;
+  margin-top:10px;
+}
+
+.footer-credit a{
+  color:#e2e8f0;
+  text-decoration:none;
+  font-weight:600;
+}
+
 .sticky-footer{
   position:fixed;
   bottom:0;

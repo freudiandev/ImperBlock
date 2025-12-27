@@ -110,6 +110,7 @@ const schemaData = {
 }
 
 export default function Home() {
+  const ogImage = 'https://imperblock.ec/images/opengraph.png'
   return (
     <>
       <Head>
@@ -121,17 +122,37 @@ export default function Home() {
         <meta name="keywords" content="Chova, Manto asfáltico, Humedad por capilaridad, Impermeabilizante acrílico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index,follow" />
+        <meta name="theme-color" content="#0f172a" />
         <link rel="canonical" href="https://imperblock.ec/" />
-        {/* OG tags keep geo-benefit message consistent across social and LLM snippets */}
+        {/* OG/Twitter/Telegram/WhatsApp/Reddit meta keep geo-benefit message consistent across engines */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Imperblock | Impermeabilización y Construcción en Quito | Garantía Certificada" />
         <meta
           property="og:description"
           content="Tecnología adaptada al clima andino de Quito. Eliminamos humedad y goteras con garantía certificada."
         />
+        <meta property="og:site_name" content="Imperblock - Soluciones Técnicas Ecuador" />
         <meta property="og:url" content="https://imperblock.ec/" />
         <meta property="og:locale" content="es_EC" />
-        <meta property="og:image" content="https://imperblock.ec/images/a.webp" />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:secure_url" content={ogImage} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="720" />
+        <meta property="og:image:height" content="1280" />
+        <meta property="og:image:alt" content="Equipo Imperblock impermeabilizando losa en Quito" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Imperblock | Impermeabilización y Construcción en Quito | Garantía Certificada" />
+        <meta
+          name="twitter:description"
+          content="Tecnología adaptada al clima andino de Quito. Eliminamos humedad y goteras con garantía certificada."
+        />
+        <meta name="twitter:image" content={ogImage} />
+        <meta itemProp="name" content="Imperblock | Impermeabilización y Construcción en Quito | Garantía Certificada" />
+        <meta
+          itemProp="description"
+          content="Expertos en eliminar humedad y goteras con tecnología adaptada al clima de Quito. 10 años protegiendo hogares ecuatorianos."
+        />
+        <meta itemProp="image" content={ogImage} />
         <link rel="icon" type="image/png" href="/images/logo.png" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
@@ -375,6 +396,54 @@ export default function Home() {
             </div>
           </section>
 
+          <section id="hashtags" className="section hashtags-section container" aria-label="Zona de hashtags y contexto local">
+            <div className="hashtags-content">
+              <h2 className="hashtags-title">Zona de Hashtags</h2>
+              <div className="hashtags-grid">
+                {[
+                  '#ImpermeabilizacionQuito',
+                  '#ImpermeabilizacionCumbaya',
+                  '#ValleDeLosChillos',
+                  '#Tumbaco',
+                  '#ConstruccionQuito',
+                  '#QuitoNorte',
+                  '#QuitoSur',
+                  '#Sangolqui',
+                  '#ArquitecturaQuito',
+                  '#Pichincha',
+                  '#Goteras',
+                  '#Humedad',
+                  '#Filtraciones',
+                  '#ParedesHumedas',
+                  '#Salitre',
+                  '#Moho',
+                  '#ReparacionDeTechos',
+                  '#MantenimientoDeCasas',
+                  '#LluviasQuito',
+                  '#InviernoEnQuito',
+                  '#Chova',
+                  '#MantoAsfaltico',
+                  '#Impermeabilizante',
+                  '#Losa',
+                  '#Cisternas',
+                  '#IngenieriaCivilEcuador',
+                  '#ConstruccionSegura',
+                  '#Imperblock',
+                  '#IngenieriaEcuatoriana',
+                  '#ClimaAndino',
+                  '#SolDeQuito',
+                  '#HogarSeco',
+                  '#CalidadEcuador',
+                  '#SinHumedad'
+                ].map((tag) => (
+                  <span key={tag} className="hashtag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </section>
+
           <aside className="section alt container" aria-label="Confianza y garantías">
             <h2>¿Por qué confiar en Imperblock?</h2>
             <ul className="confidence-list">
@@ -429,6 +498,11 @@ export default function Home() {
                 TikTok
               </a>
             </div>
+          </div>
+          <div className="footer-credit">
+            <a href="https://instagram.com/freudiandev" target="_blank" rel="noopener" aria-label="Sitio programado por freudiandev">
+              Programado por freudiandev
+            </a>
           </div>
         </footer>
 
