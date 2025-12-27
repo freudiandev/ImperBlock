@@ -454,7 +454,7 @@ export default function Home() {
                 ['j','Revestimiento final listo para pintura'],
                 ['k','Equipo Imperblock aplicando membrana líquida'],
                 ['l','Sellado de juntas y perímetros en terraza']].map(([letter, alt]) => (
-                  <div className="col-6 col-md-4 col-lg-3" key={letter}>
+                  <div className="col-6 col-md-6 col-lg-4" key={letter}>
                     <figure>
                       <picture>
                         <source srcSet={`/images/${letter}.webp`} type="image/webp" />
@@ -581,11 +581,11 @@ export default function Home() {
                     <span>Garantía escrita</span>
                   </div>
                 </div>
-                <div className="col-12 col-lg-6 contact-actions">
-                  <a
-                    className="btn primary"
-                    aria-label="Hablar con Imperblock por WhatsApp"
-                    href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
+              <div className="col-12 col-lg-6 contact-actions">
+                <a
+                  className="btn primary"
+                  aria-label="Hablar con Imperblock por WhatsApp"
+                  href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
                   >
                     WhatsApp inmediato
                   </a>
