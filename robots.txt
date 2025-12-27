@@ -1,0 +1,23 @@
+User-Agent: facebookexternalhit
+Allow: /
+
+User-Agent: FacebookBot
+Allow: /
+
+User-Agent: Twitterbot
+Allow: /
+
+User-Agent: LinkedInBot
+Allow: /
+
+User-Agent: WhatsApp
+Allow: /
+
+User-Agent: TelegramBot
+Allow: /
+
+User-Agent: *
+Allow: /
+
+Host: https://impermebilizacion.uio.ec
+Sitemap: https://impermebilizacion.uio.ec/sitemap.xml
