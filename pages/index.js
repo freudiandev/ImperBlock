@@ -1,341 +1,391 @@
-      <footer className="site-footer">
-        <div className="container footer-inner">
-          <div className="footer-brand">
-            <span className="brand-logo">💧</span>
-            <span className="brand-name">ImperBlock</span>
-          </div>
-          <div className="footer-contact">
-            <span>Quito, Ecuador</span> | <a href="tel:+593959785062">095 978 5062</a>
-          </div>
-          <div className="footer-social">
-            <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-            <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
-            <a href="https://tiktok.com/@imperblock.ec" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
-            <a href="https://medium.com/@blockimper" target="_blank" rel="noopener" aria-label="Medium">Blog</a>
-          </div>
-          <div className="footer-copy">
-            © {new Date().getFullYear()} ImperBlock. Todos los derechos reservados.
-          </div>
-        </div>
-      </footer>
 import Head from 'next/head'
-import ScrollReveal from '../components/ScrollReveal'
-import HeroVideo from '../components/HeroVideo'
-import Navbar from '../components/Navbar'
+
+const schemaData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'HomeAndConstructionBusiness',
+      '@id': 'https://imperblock.ec/#business',
+      'name': 'Imperblock - Soluciones Técnicas Ecuador',
+      'url': 'https://imperblock.ec/',
+      'image': 'https://imperblock.ec/images/hero-imperblock.webp',
+      'logo': 'https://imperblock.ec/images/logo.png',
+      'description': 'Impermeabilización técnica y construcción adaptada al clima andino de Quito, Cumbayá, Los Chillos y Pichincha.',
+      'telephone': '+593959785062',
+      'priceRange': '$$',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': 'Sector Kennedy, Quito',
+        'addressLocality': 'Quito',
+        'addressRegion': 'Pichincha',
+        'postalCode': '170102',
+        'addressCountry': 'EC'
+      },
+      'geo': {
+        '@type': 'GeoCoordinates',
+        'latitude': '-0.1807',
+        'longitude': '-78.4678'
+      },
+      'areaServed': [
+        { '@type': 'City', 'name': 'Quito' },
+        { '@type': 'City', 'name': 'Cumbayá' },
+        { '@type': 'City', 'name': 'Los Chillos' },
+        { '@type': 'State', 'name': 'Pichincha' }
+      ],
+      'openingHoursSpecification': [
+        { '@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], 'opens': '08:00', 'closes': '18:00' },
+        { '@type': 'OpeningHoursSpecification', 'dayOfWeek': 'Saturday', 'opens': '09:00', 'closes': '14:00' }
+      ],
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'Impermeabilización especializada',
+        'itemListElement': [
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Impermeabilización de losas',
+              'serviceType': 'Aplicación de manto asfáltico, membranas líquidas y sellado UV',
+              'areaServed': ['Quito', 'Cumbayá', 'Los Chillos', 'Pichincha'],
+              'description': 'Sistema mixto (imprimación acrílica + manto asfáltico reforzado) calibrado para radiación UV alta y lluvia concentrada.'
+            },
+            'availability': 'https://schema.org/InStock'
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Impermeabilización de cisternas',
+              'serviceType': 'Revestimiento sanitario y sellado estructural',
+              'areaServed': ['Quito', 'Pichincha'],
+              'description': 'Revestimientos epóxicos y cementicios certificados para agua potable y control de filtraciones.'
+            },
+            'availability': 'https://schema.org/InStock'
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Corrección de humedad en paredes',
+              'serviceType': 'Tratamiento de humedad por capilaridad y filtración',
+              'areaServed': ['Quito', 'Los Chillos', 'Pichincha'],
+              'description': 'Barreras químicas transpirables y morteros flexibles para muros en altura (2.850 m).'
+            },
+            'availability': 'https://schema.org/InStock'
+          }
+        ]
+      },
+      'sameAs': [
+        'https://instagram.com/imperblock.ec',
+        'https://facebook.com/imperblock.ec',
+        'https://tiktok.com/@imperblock.ec',
+        'https://medium.com/@blockimper'
+      ]
+    },
+    {
+      '@type': 'Service',
+      '@id': 'https://imperblock.ec/#service',
+      'name': 'Impermeabilización certificada para clima andino',
+      'serviceType': ['Impermeabilización de losas', 'Impermeabilización de cisternas', 'Corrección de humedad en paredes'],
+      'provider': { '@id': 'https://imperblock.ec/#business' },
+      'areaServed': ['Quito', 'Cumbayá', 'Los Chillos', 'Pichincha'],
+      'audience': { '@type': 'Audience', 'audienceType': 'Propietarios y administradores de edificios en Quito' },
+      'termsOfService': 'Garantía escrita según sistema aplicado.'
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://imperblock.ec/#faq',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '¿Cuál es el mejor impermeabilizante para losas en Quito?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Imperblock aplica un sistema mixto: imprimación acrílica, manto asfáltico con refuerzo de poliéster y sellado UV. Evaluamos juntas, pendientes y dilataciones para que funcione en la altitud de Quito y entregamos garantía certificada.'
+          }
+        }
+      ]
+    }
+  ]
+}
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>ImperBlock — Impermeabilización profesional en Quito</title>
-        <meta name="description" content="Impermeabilización de terrazas, tejados, fosos y cisternas. Garantía 5 años + mantenimiento anual gratuito. Quito, Ecuador." />
+        <title>Imperblock | Impermeabilización y Construcción en Quito | Garantía Certificada</title>
+        <meta
+          name="description"
+          content="Expertos en eliminar humedad y goteras con tecnología adaptada al clima de Quito. 10 años protegiendo hogares ecuatorianos. ¡Cotización gratuita vía WhatsApp!"
+        />
+        <meta name="keywords" content="Chova, Manto asfáltico, Humedad por capilaridad, Impermeabilizante acrílico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        {/* Cache Control */}
-        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta httpEquiv="Pragma" content="no-cache" />
-        <meta httpEquiv="Expires" content="0" />
-        
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://imperblock.ec/" />
+        {/* OG tags keep geo-benefit message consistent across social and LLM snippets */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Imperblock | Impermeabilización y Construcción en Quito | Garantía Certificada" />
+        <meta
+          property="og:description"
+          content="Tecnología adaptada al clima andino de Quito. Eliminamos humedad y goteras con garantía certificada."
+        />
+        <meta property="og:url" content="https://imperblock.ec/" />
+        <meta property="og:locale" content="es_EC" />
+        <meta property="og:image" content="https://imperblock.ec/images/hero-imperblock.webp" />
         <link rel="icon" type="image/png" href="/images/logo.png" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       </Head>
 
-      <Navbar />
-
-      <section className="hero">
-        <HeroVideo />
-        <div className="hero-content container">
-          <div className="hero-badge">
-            <span className="badge-years">5 AÑOS</span>
-            <span className="badge-text">GARANTÍA + MANTENIMIENTO ANUAL GRATUITO</span>
-          </div>
-          <div className="hero-cta">
-            <a className="btn primary" href="#contacto">Solicita asesoría gratuita</a>
-            <a className="btn ghost" href="#servicios">Ver servicios</a>
-          </div>
-        </div>
-      </section>
-
-      <main>
-        <ScrollReveal>
-          <section id="servicios" className="section container">
-            <h2>Servicios de Impermeabilización</h2>
-            <p className="muted">Soluciones profesionales para proteger tu hogar, tu edificio y tu tranquilidad.</p>
-            <div className="grid">
-              <ScrollReveal delay={100}>
-                <div className="service-card">
-                  <div className="service-icon">🏠</div>
-                  <h3>Impermeabilización de Terrazas</h3>
-                  <p>Evita filtraciones y daños estructurales. Materiales de última generación, resistencia al tránsito y garantía real.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <div className="service-card">
-                  <div className="service-icon">🏗️</div>
-                  <h3>Tejados y Pérgolas</h3>
-                  <p>Instalación y protección de cubiertas, pérgolas y tejados. Soluciones estéticas y funcionales, adaptadas a cada necesidad.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <div className="service-card">
-                  <div className="service-icon">💧</div>
-                  <h3>Fosos, Cisternas y Piscinas</h3>
-                  <p>Impermeabilización especializada para zonas de alta exigencia. Seguridad y durabilidad garantizadas.</p>
-                </div>
-              </ScrollReveal>
-            </div>
-          </section>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <section id="proceso" className="section alt container">
-            <h2>¿Cómo trabajamos?</h2>
-            <p className="muted">Transparencia, profesionalidad y atención personalizada en cada etapa.</p>
-            <div className="process">
-              <ScrollReveal delay={100}>
-                <div className="process-step">
-                  <div className="step-number">1</div>
-                  <h3>Contacto y visita técnica</h3>
-                  <p>Coordinamos una <strong>visita gratuita</strong> para evaluar tu caso y darte la mejor solución.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={150}>
-                <div className="process-step">
-                  <div className="step-number">2</div>
-                  <h3>Diagnóstico profesional</h3>
-                  <p>Analizamos el estado, medimos y te explicamos las opciones de materiales y técnicas.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <div className="process-step">
-                  <div className="step-number">3</div>
-                  <h3>Cotización clara</h3>
-                  <p>Presupuesto detallado por m², sin sorpresas. Forma de pago transparente y sin anticipos abusivos.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={250}>
-                <div className="process-step">
-                  <div className="step-number">4</div>
-                  <h3>Ejecución y entrega</h3>
-                  <p>Cumplimos plazos y usamos los materiales acordados. Supervisión constante y comunicación directa.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <div className="process-step">
-                  <div className="step-number">5</div>
-                  <h3>Garantía y postventa</h3>
-                  <p><strong>5 años de garantía</strong> y mantenimiento anual gratuito. Seguimiento real y compromiso post-obra.</p>
-                </div>
-              </ScrollReveal>
-            </div>
-          </section>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <section id="garantia" className="section-blue">
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-lg-6">
-                  <div className="guarantee-icon-large">
-                    <i className="fas fa-shield-alt"></i>
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <div className="guarantee-content">
-                    <h2>Garantía de 5 Años</h2>
-                    <p>Todos nuestros trabajos incluyen garantía de 5 años con <strong>mantenimiento anual gratuito</strong>. Visitamos tu obra cada año para verificar que todo esté perfecto y realizar cualquier intervención necesaria sin costo adicional.</p>
-                    <ul className="guarantee-list">
-                      <li><i className="fas fa-check-circle"></i> Visita técnica anual incluida</li>
-                      <li><i className="fas fa-check-circle"></i> Reparaciones cubiertas por garantía</li>
-                      <li><i className="fas fa-check-circle"></i> Materiales de última generación</li>
-                      <li><i className="fas fa-check-circle"></i> Responsabilidad total sobre nuestro trabajo</li>
-                    </ul>
-                  </div>
-                </div>
+      <div className="page-shell">
+        <header className="top-bar" aria-label="Cabecera principal">
+          <div className="container bar-inner">
+            <div className="brand-mark">
+              <span className="brand-icon" role="img" aria-label="Gota de agua">
+                💧
+              </span>
+              <div>
+                <span className="brand-name">Imperblock</span>
+                <p className="brand-tagline">Ingeniería ecuatoriana anti-humedad</p>
               </div>
             </div>
-          </section>
-        </ScrollReveal>
+            <nav className="main-nav" aria-label="Navegación principal">
+              <a href="#servicios">Servicios</a>
+              <a href="#local-trust">Experiencia local</a>
+              <a href="#faq">FAQ</a>
+              <a href="#contacto">Contacto</a>
+            </nav>
+            <a
+              className="cta-link"
+              aria-label="Abrir WhatsApp Imperblock"
+              href="https://wa.me/593959785062?text=Quiero%20una%20inspeccion%20Imperblock"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </header>
 
-        <ScrollReveal>
-          <section id="galeria" className="section alt container">
-            <h2>Proyectos Realizados</h2>
-            <p className="muted">Trabajos que hablan por sí solos.</p>
-            <div className="gallery">
-              <ScrollReveal delay={100}>
-                <img src="/images/a.jpg" alt="Trabajo de impermeabilización" />
-              </ScrollReveal>
-              <ScrollReveal delay={125}>
-                <img src="/images/b.jpg" alt="Proyecto ImperBlock" />
-              </ScrollReveal>
-              <ScrollReveal delay={150}>
-                <img src="/images/c.jpg" alt="Impermeabilización de terraza" />
-              </ScrollReveal>
-              <ScrollReveal delay={175}>
-                <img src="/images/d.jpg" alt="Servicio profesional" />
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <img src="/images/e.jpg" alt="Impermeabilización profesional" />
-              </ScrollReveal>
-              <ScrollReveal delay={225}>
-                <img src="/images/f.jpg" alt="Trabajo completado" />
-              </ScrollReveal>
-              <ScrollReveal delay={250}>
-                <img src="/images/g.jpg" alt="Impermeabilización de calidad" />
-              </ScrollReveal>
-              <ScrollReveal delay={275}>
-                <img src="/images/h.jpg" alt="Proyecto finalizado" />
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <img src="/images/i.jpg" alt="Trabajo especializado" />
-              </ScrollReveal>
-              <ScrollReveal delay={325}>
-                <img src="/images/j.jpg" alt="Impermeabilización garantizada" />
-              </ScrollReveal>
-              <ScrollReveal delay={350}>
-                <img src="/images/k.jpg" alt="Servicio completo" />
-              </ScrollReveal>
-              <ScrollReveal delay={375}>
-                <img src="/images/l.jpg" alt="Resultado profesional" />
-              </ScrollReveal>
-            </div>
-          </section>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <section id="contacto" className="section container">
-            <h2>Contacto</h2>
-            <p className="muted">Solicita tu asesoramiento y presupuesto gratuito.</p>
-            <div className="contact-grid">
-              <ScrollReveal delay={100}>
-                <div className="contact-card">
-                  <div className="contact-icon">📞</div>
-                  <h3>Teléfono</h3>
-                  <p className="contact-value">
-                    <a href="tel:+593959785062">095 978 5062</a>
-                  </p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <div className="contact-card">
-                  <div className="contact-icon">📍</div>
-                  <h3>Ubicación</h3>
-                  <p className="contact-value">Quito — Sector La Kennedy</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <div className="contact-card">
-                  <div className="contact-icon">📱</div>
-                  <h3>Redes Sociales</h3>
-                  <div className="social-links">
-                    <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener">Instagram</a>
-                    <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener">Facebook</a>
-                    <a href="https://tiktok.com/@imperblock.ec" target="_blank" rel="noopener">TikTok</a>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-            <ScrollReveal delay={400}>
-              <div className="cta-whatsapp">
-                <a href="https://wa.me/593959785062?text=Hola,%20necesito%20información%20sobre%20impermeabilización" 
-                  className="btn primary" target="_blank" rel="noopener">
-                  Escribir por WhatsApp
+        <main>
+          <article id="inicio" className="hero-ecu container">
+            <div className="hero-copy">
+              <p className="eyebrow">Tecnología adaptada al clima andino</p>
+              <h1>Impermeabilización Definitiva en Quito y Valles</h1>
+              <p className="lead">
+                Quitamos humedad y goteras con métodos que resisten radiación UV y lluvias concentradas. Diagnóstico técnico, materiales
+                certificados y garantía escrita.
+              </p>
+              <div className="cta-row">
+                <a
+                  className="btn primary"
+                  aria-label="Cotizar inspección Imperblock por WhatsApp"
+                  href="https://wa.me/593959785062?text=Quiero%20una%20inspeccion%20Imperblock"
+                >
+                  Cotizar por WhatsApp
+                </a>
+                <a className="btn ghost" aria-label="Llamar a un ingeniero de Imperblock" href="tel:+593959785062">
+                  Llamar a un ingeniero
                 </a>
               </div>
-            </ScrollReveal>
-          </section>
-        </ScrollReveal>
+              <ul className="hero-points">
+                <li>Garantía escrita y mantenimiento preventivo</li>
+                <li>Diagnóstico según altura 2.850 m y dilataciones térmicas</li>
+                <li>Respuesta rápida en Quito, Cumbayá y Los Chillos</li>
+              </ul>
+            </div>
+            <figure className="hero-media">
+              <picture>
+                <source srcSet="/images/hero-imperblock.webp" type="image/webp" />
+                <img
+                  src="/images/proyecto-1.jpg"
+                  alt="Equipo Imperblock impermeabilizando losa en Quito"
+                  loading="lazy"
+                  decoding="async"
+                  width="720"
+                  height="540"
+                />
+              </picture>
+              <figcaption>Ensayos de adherencia y sellado UV en losas de Quito.</figcaption>
+            </figure>
+          </article>
 
-        <ScrollReveal>
-          <section id="blog" className="section alt container">
-            <h2>Blog y Recursos</h2>
-            <p className="muted">Lee artículos sobre impermeabilización de techos y lozas, ingeniería civil y arquitectura, escritos por nuestro equipo y colaboradores.</p>
-            <div className="blog-access-box">
+          <section id="por-que" className="section container" aria-label="Causas de humedad en Quito">
+            <h2>¿Por qué se humedecen las paredes en Ecuador?</h2>
+            <p className="muted">
+              Altitud, radiación UV y lluvias concentradas generan microfisuras. Imperblock formula sistemas que soportan dilatación,
+              capilaridad y cambios térmicos propios de Quito.
+            </p>
+            <div className="qa-grid">
+              <article>
+                <h3>¿Qué pasa si uso impermeabilizante genérico?</h3>
+                <p>Sin protección UV y flexibilidad, el material se cuartea y permite filtraciones en semanas.</p>
+              </article>
+              <article>
+                <h3>¿Cómo prevenimos la humedad por capilaridad?</h3>
+                <p>Inyectamos barreras químicas y usamos morteros transpirables para evitar que el agua suba por los muros.</p>
+              </article>
+              <article>
+                <h3>¿Qué garantía real ofrecen?</h3>
+                <p>Entrega escrita + mantenimiento programado. Si se fisura, volvemos y lo corregimos.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="servicios" className="section alt container" aria-label="Servicios principales">
+            <h2>¿Cómo impermeabilizamos tu losa, cisterna o pared?</h2>
+            <div className="service-grid">
+              <article className="service-card">
+                <picture>
+                  <source srcSet="/images/losas-imperblock.webp" type="image/webp" />
+                  <img
+                    src="/images/proyecto-2.jpg"
+                    alt="Impermeabilización de losa con manto asfáltico"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="260"
+                  />
+                </picture>
+                <h3>¿Cuál es el método para losas?</h3>
+                <p>Imprimación acrílica, manto asfáltico reforzado y sellado UV para soportar sol ecuatoriano.</p>
+                <ul>
+                  <li>Chova y manto asfáltico certificado</li>
+                  <li>Refuerzo de juntas y bajantes</li>
+                  <li>Garantía 5 años + visita anual</li>
+                </ul>
+              </article>
+
+              <article className="service-card">
+                <picture>
+                  <source srcSet="/images/cisternas-imperblock.webp" type="image/webp" />
+                  <img
+                    src="/images/proyecto-3.jpg"
+                    alt="Revestimiento sanitario de cisterna"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="260"
+                  />
+                </picture>
+                <h3>¿Cómo sellamos cisternas?</h3>
+                <p>Revestimiento epóxico y cementicio con acabado sanitario para agua potable.</p>
+                <ul>
+                  <li>Pruebas de estanqueidad</li>
+                  <li>Tratamiento de fisuras y anclajes</li>
+                  <li>Certificado de calidad de agua</li>
+                </ul>
+              </article>
+
+              <article className="service-card">
+                <picture>
+                  <source srcSet="/images/paredes-imperblock.webp" type="image/webp" />
+                  <img
+                    src="/images/proyecto-4.jpg"
+                    alt="Tratamiento de humedad en paredes"
+                    loading="lazy"
+                    decoding="async"
+                    width="400"
+                    height="260"
+                  />
+                </picture>
+                <h3>¿Cómo frenamos la humedad en paredes?</h3>
+                <p>Barrera química y morteros flexibles que permiten respirar al muro sin filtraciones.</p>
+                <ul>
+                  <li>Diagnóstico de capilaridad y filtración</li>
+                  <li>Acabados listos para pintura</li>
+                  <li>Intervención limpia en zonas habitadas</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section id="local-trust" className="section container" aria-label="Experiencia en clima ecuatoriano">
+            <h2>Experiencia en Clima Ecuatoriano</h2>
+            <p>
+              20+ años trabajando en Quito, Cumbayá y Los Chillos. Adaptamos sistemas a radiación UV alta, granizadas y cambios térmicos
+              bruscos.
+            </p>
+            <div className="trust-grid">
+              <article>
+                <h3>¿Qué es la ventaja Ecua?</h3>
+                <p>Formulamos según altitud (2.850 m) para que las membranas no se cuarteen ni levanten.</p>
+              </article>
+              <article>
+                <h3>¿Cómo evitamos fisuras futuras?</h3>
+                <p>Refuerzos en juntas, perímetros y encuentros críticos con geotextil y sellos elásticos.</p>
+              </article>
+              <article>
+                <h3>¿Quién ejecuta?</h3>
+                <p>Equipo propio dirigido por ingeniería civil y arquitectura local. Sin subcontratos ocultos.</p>
+              </article>
+            </div>
+          </section>
+
+          <aside className="section alt container" aria-label="Confianza y garantías">
+            <h2>¿Por qué confiar en Imperblock?</h2>
+            <ul className="confidence-list">
+              <li>Garantía certificada y seguimiento anual.</li>
+              <li>Materiales probados: chova, manto asfáltico, impermeabilizante acrílico grado andino.</li>
+              <li>Respuestas en menos de 24h en Quito y valles.</li>
+            </ul>
+          </aside>
+
+          <section id="faq" className="section container" aria-label="Preguntas frecuentes">
+            <h2>¿Cuál es el mejor impermeabilizante para losas en Quito?</h2>
+            <p>
+              Usamos sistema mixto: imprimación acrílica, manto asfáltico con refuerzo de poliéster y sellado UV. Evaluamos pendientes,
+              juntas y dilataciones antes de aplicar para que no se levante con el sol de Quito.
+            </p>
+          </section>
+
+          <section id="contacto" className="section alt container" aria-label="Contacto y cotización">
+            <h2>¿Listo para eliminar la humedad?</h2>
+            <p>Agenda una inspección gratuita. Respondemos por WhatsApp en minutos.</p>
+            <div className="cta-row">
               <a
-                href="https://medium.com/@blockimper"
-                target="_blank"
-                rel="noopener"
                 className="btn primary"
-                style={{marginTop: '16px'}}
+                aria-label="Hablar con Imperblock por WhatsApp"
+                href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
               >
-                Visitar el Blog en Medium
+                Hablar ahora
               </a>
-              <p style={{marginTop: '12px', color: 'var(--brand-color)', fontWeight: 700}}>
-                Encuentra consejos, tendencias y casos reales para proteger tu inversión y mantener tus espacios en óptimas condiciones.
-              </p>
+              <a className="btn ghost" aria-label="Enviar correo a Imperblock" href="mailto:contacto@imperblock.ec">
+                Enviar correo
+              </a>
             </div>
+            <p className="muted contact-meta">Atendemos Quito, Cumbayá, Los Chillos y Pichincha.</p>
           </section>
-        </ScrollReveal>
-// ...existing code...
+        </main>
 
-        <ScrollReveal>
-          <section className="section values container">
-            <h2>Nuestros Valores</h2>
-            <div className="values-grid">
-              <ScrollReveal delay={100}>
-                <div className="value-item">
-                  <strong>Seriedad</strong>
-                  <p>Cumplimos lo que prometemos. Plazos claros y respetados.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={200}>
-                <div className="value-item">
-                  <strong>Conocimiento</strong>
-                  <p>Experiencia en España y Ecuador. Materiales de última generación.</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={300}>
-                <div className="value-item">
-                  <strong>Responsabilidad</strong>
-                  <p>El cliente es nuestra prioridad. Garantizamos nuestro trabajo.</p>
-                </div>
-              </ScrollReveal>
+        <footer className="page-footer" aria-label="Pie de página">
+          <div className="container footer-inner">
+            <div>
+              <p className="brand-name">Imperblock</p>
+              <p className="muted">Soluciones técnicas contra la humedad — Quito, Ecuador</p>
             </div>
-          </section>
-        </ScrollReveal>
+            <div className="footer-links">
+              <a href="tel:+593959785062" aria-label="Llamar a Imperblock">095 978 5062</a>
+              <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Instagram Imperblock">
+                Instagram
+              </a>
+              <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Facebook Imperblock">
+                Facebook
+              </a>
+              <a href="https://tiktok.com/@imperblock.ec" target="_blank" rel="noopener" aria-label="TikTok Imperblock">
+                TikTok
+              </a>
+            </div>
+          </div>
+        </footer>
 
-        <ScrollReveal>
-          <section className="section hashtags-section container">
-            <div className="hashtags-content">
-              <h3 className="hashtags-title">Zona de hashtags</h3>
-              <div className="hashtags-grid">
-                <span className="hashtag">#ImpermeabilizacionTechosQuito</span>
-                <span className="hashtag">#ImpermeabilizarLosas</span>
-                <span className="hashtag">#EvitarHumedadCasa</span>
-                <span className="hashtag">#SolucionesHumedadParedes</span>
-                <span className="hashtag">#RestauracionFachadasQuito</span>
-                <span className="hashtag">#ObrasCivilesQuito</span>
-                <span className="hashtag">#ArquitectosQuito</span>
-                <span className="hashtag">#ImpermeabilizanteChova</span>
-                <span className="hashtag">#EvitarGoterasTechos</span>
-                <span className="hashtag">#RestauracionArquitecturaQuito</span>
-              </div>
-            </div>
-          </section>
-        </ScrollReveal>
-      </main>
-
-      <footer className="site-footer">
-        <div className="container footer-inner">
-          <div className="footer-brand">
-            <div className="brand">
-              <img src="/images/logo.png" alt="ImperBlock Logo" className="brand-logo" />
-              <span className="brand-name">ImperBlock</span>
-            </div>
-            <p className="footer-tagline">Solucionamos problemas, no los creamos</p>
-          </div>
-          <div className="footer-contact">
-            <p><strong>Manolo Bello</strong> — CEO</p>
-            <p>095 978 5062</p>
-            <p>impermeabilizacion.uio.ec</p>
-          </div>
-          <div className="footer-copy">
-            <p>© {new Date().getFullYear()} ImperBlock. Todos los derechos reservados.</p>
-            <p className="muted">Empresa de impermeabilización profesional — Quito, Pichincha</p>
-            <p className="muted footer-credit">Sitio web hecho por <a href="https://www.instagram.com/freudiandev/" target="_blank" rel="noopener noreferrer">freudianDev</a></p>
-          </div>
+        <div className="sticky-footer" aria-label="CTA móvil fija">
+          <a
+            aria-label="Abrir WhatsApp Imperblock"
+            href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
+          >
+            WhatsApp Imperblock
+          </a>
         </div>
-      </footer>
+      </div>
     </>
   )
 }
