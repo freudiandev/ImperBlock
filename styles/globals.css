@@ -354,3 +354,138 @@ p, li, .lead, .muted {
     box-shadow:0 6px 18px rgba(15,23,42,0.06);
   }
 }
+
+@media (min-width: 992px){
+  .section{
+    padding:110px 0;
+  }
+
+  .section h2{
+    margin-bottom:28px;
+  }
+
+  .section p,
+  .section .muted{
+    line-height:1.85;
+    margin-bottom:22px;
+  }
+
+  .qa-grid{
+    gap:28px;
+  }
+
+  .qa-grid article{
+    background:#fff;
+    border:1px solid rgba(24,47,92,0.08);
+    border-radius:14px;
+    padding:20px;
+    box-shadow:0 12px 36px rgba(15,23,42,0.08);
+  }
+
+  .service-card{
+    padding:20px;
+  }
+
+  .service-grid{
+    gap:28px;
+  }
+
+  .gallery-grid figure{
+    padding:12px;
+  }
+}
+
+/* STICKY CTA MOBILE */
+.sticky-footer{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  background:#0f172a;
+  padding:12px 16px;
+  z-index:1200;
+  box-shadow:0 -6px 20px rgba(15,23,42,0.25);
+}
+
+.sticky-footer a{
+  background:#22c55e;
+  color:#fff;
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+@media (min-width: 961px){
+  .sticky-footer{
+    display:none;
+  }
+}
+
+/* FOOTER */
+.page-footer{
+  background:linear-gradient(135deg, #0f172a 0%, #182f5c 50%, #0d94cc 100%);
+  color:#e2e8f0;
+  padding:36px 0 24px;
+}
+
+.page-footer a{
+  color:#e2e8f0;
+  text-decoration:none;
+}
+
+.footer-inner{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  align-items:start;
+}
+
+.footer-block{
+  display:grid;
+  gap:8px;
+}
+
+.footer-tagline,
+.footer-location{
+  margin:0;
+  color:#cbd5e1;
+}
+
+.footer-title{
+  margin:0 0 4px 0;
+  font-weight:800;
+  color:#fff;
+}
+
+.footer-links{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.footer-cta{
+  display:inline-block;
+  background:#22c55e;
+  color:#0f172a;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:800;
+}
+
+.footer-link{
+  color:#e2e8f0;
+}
+
+.footer-credit{
+  text-align:center;
+  margin-top:14px;
+}
+
+.footer-credit a{
+  color:#e2e8f0;
+  text-decoration:none;
+  font-weight:700;
+}

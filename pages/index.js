@@ -604,21 +604,40 @@ export default function Home() {
 
         <footer className="page-footer" aria-label="Pie de página">
           <div className="container footer-inner">
-            <div>
+            <div className="footer-block">
               <p className="brand-name">Imperblock</p>
-              <p className="muted">Soluciones técnicas contra la humedad — Quito, Ecuador</p>
+              <p className="footer-tagline">Soluciones técnicas contra la humedad — Quito, Ecuador</p>
+              <p className="footer-location">Quito · Cumbayá · Los Chillos</p>
             </div>
-            <div className="footer-links">
-              <a href="tel:+593959785062" aria-label="Llamar a Imperblock">095 978 5062</a>
-              <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Instagram Imperblock">
-                Instagram
+            <div className="footer-block">
+              <p className="footer-title">Contacto directo</p>
+              <a href="tel:+593959785062" aria-label="Llamar a Imperblock" className="footer-link">
+                Tel: 095 978 5062
               </a>
-              <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Facebook Imperblock">
-                Facebook
+              <a href="mailto:contacto@imperblock.ec" aria-label="Correo Imperblock" className="footer-link">
+                contacto@imperblock.ec
               </a>
-              <a href="https://tiktok.com/@imperblock.ec" target="_blank" rel="noopener" aria-label="TikTok Imperblock">
-                TikTok
+              <a
+                className="footer-cta"
+                aria-label="WhatsApp Imperblock"
+                href="https://wa.me/593959785062?text=Necesito%20impermeabilizar%20con%20Imperblock"
+              >
+                WhatsApp inmediato
               </a>
+            </div>
+            <div className="footer-block">
+              <p className="footer-title">Síguenos</p>
+              <div className="footer-links">
+                <a href="https://instagram.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Instagram Imperblock">
+                  Instagram
+                </a>
+                <a href="https://facebook.com/imperblock.ec" target="_blank" rel="noopener" aria-label="Facebook Imperblock">
+                  Facebook
+                </a>
+                <a href="https://tiktok.com/@imperblock.ec" target="_blank" rel="noopener" aria-label="TikTok Imperblock">
+                  TikTok
+                </a>
+              </div>
             </div>
           </div>
           <div className="footer-credit">
