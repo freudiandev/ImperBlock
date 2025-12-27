@@ -715,3 +715,5 @@ El código está bien estructurado, usa tecnologías modernas y sigue buenas pr�
 
 **Documento generado:** 12 de diciembre de 2025  
 **Versión:** 1.0
+
+Visita el sitio en producción: https://impermebilizacion.uio.ec/ (canónico) — ayúdanos midiendo con Facebook Sharing Debugger y Core Web Vitals.

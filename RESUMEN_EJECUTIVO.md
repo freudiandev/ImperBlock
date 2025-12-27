@@ -651,3 +651,5 @@ El proyecto está ahora en un estado **producción-ready** con toda la documenta
 Gracias por confiar en este análisis exhaustivo. El proyecto ImperBlock está ahora documentado, actualizado y listo para crecer. ¡Éxito con el desarrollo futuro!
 
 🚀 **Happy Coding!**
+
+Visita el sitio en producción: https://impermebilizacion.uio.ec/ (canónico) — ayúdanos midiendo con Facebook Sharing Debugger y Core Web Vitals.
